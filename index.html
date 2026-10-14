@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#060a14">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' https://cdn.pixabay.com https://images.prop24.com data:; connect-src 'self'">
+<title>Tesselaars Dal Land Regeneration Project — Investment Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cs-accent:#34d399;--cs-bg:#060a14;--cs-text:#f2f0f8;--cs-bg-card:#10131f;--cs-border:#1f4a3a;--cs-text-muted:#b0bec5;--cs-green:#34d399;--cs-accent-glow:rgba(52,211,153,.22);--cs-accent-dim:rgba(52,211,153,.1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--cs-bg);color:var(--cs-text);line-height:1.6;min-height:100vh;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif}
+.bg{position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse 80% 50% at 20% 20%,rgba(52,211,153,.06) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 70%,rgba(45,211,191,.04) 0%,transparent 60%),var(--cs-bg)}
+.glass{background:color-mix(in srgb,color-mix(in srgb,var(--cs-bg) 68%,var(--cs-accent) 32%) 55%,transparent);border:1px solid var(--cs-accent-glow);border-radius:16px;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 0 25px var(--cs-accent-glow),0 0 60px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.04)}
+.glass-hover{transition:transform .15s ease,box-shadow .3s ease,border-color .3s ease}
+.glass-hover:hover{transform:translateY(-4px);border-color:var(--cs-accent);box-shadow:0 12px 40px var(--cs-accent-glow)}
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,color-mix(in srgb,var(--cs-bg) 62%,var(--cs-accent) 38%) 85%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--cs-accent-glow);padding:0 24px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:700;color:#fff;text-decoration:none;letter-spacing:1px}
+.nav-logo span{color:var(--cs-accent)}
+.theme-cycle-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--cs-accent-glow);background:var(--cs-accent-dim);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--cs-accent);transition:transform .15s ease}
+.theme-cycle-btn:hover{transform:scale(1.1)}
+.theme-cycle-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px var(--cs-accent-glow))}
+.hero{padding:80px 24px 50px;text-align:center;max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;background:var(--cs-accent-dim);color:var(--cs-accent);border:1px solid var(--cs-accent-glow);margin-bottom:20px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:16px;background:linear-gradient(135deg,var(--cs-accent),#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 14px var(--cs-accent-glow)) drop-shadow(0 1px 2px rgba(0,0,0,.6))}
+.hero p{color:var(--cs-text-muted);font-size:1.1rem;max-width:650px;margin:0 auto 32px}
+.hero-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.hero-stat{text-align:center}
+.hero-stat .val{font-family:'Montserrat',sans-serif;font-size:2rem;font-weight:800;color:var(--cs-accent)}
+.hero-stat .lbl{font-size:.75rem;color:var(--cs-text-muted);text-transform:uppercase;letter-spacing:.05em}
+.chapters{max-width:1100px;margin:0 auto;padding:0 24px 60px;position:relative;z-index:1}
+.chapter-label{font-family:'Montserrat',sans-serif;font-size:.75rem;text-transform:uppercase;letter-spacing:2px;color:var(--cs-text-muted);margin:40px 0 18px}
+.chapter-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.chapter-card{position:relative;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer;padding:24px;transition:transform .15s ease,box-shadow .3s ease,border-color .3s ease}
+.chapter-card:hover{transform:scale(1.03);border-color:var(--cs-accent);box-shadow:0 12px 40px var(--cs-accent-glow)}
+.chapter-card .num{font-size:.7rem;font-weight:700;color:var(--cs-accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.chapter-card h3{font-size:1.15rem;font-weight:700;margin-bottom:8px}
+.chapter-card p{font-size:.85rem;color:var(--cs-text-muted);line-height:1.5}
+.chapter-card .card-img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:12px;display:block}
+.section-full{max-width:900px;margin:0 auto;padding:32px 24px;position:relative;z-index:1;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.section-full h2{font-size:1.8rem;margin-bottom:16px}
+.section-full h3{font-size:1.15rem;margin:28px 0 12px}
+.section-full h4{font-size:1rem;margin:20px 0 8px;color:var(--cs-accent)}
+.section-full p{color:var(--cs-text-muted);margin-bottom:14px}
+.section-full ul,.section-full ol{color:var(--cs-text-muted);margin:0 0 14px 20px}
+.section-full li{margin-bottom:6px}
+.section-full strong{color:var(--cs-text)}
+.section-full img{width:100%;border-radius:12px;margin:16px 0;display:block}
+.back-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:10px;border:1px solid var(--cs-border);background:var(--cs-bg-card);color:var(--cs-text);font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:600;cursor:pointer;margin-bottom:20px;transition:all .2s}
+.back-btn:hover{border-color:var(--cs-accent);color:var(--cs-accent)}
+.donate-amounts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.donate-btn{padding:16px;border-radius:12px;border:1px solid var(--cs-border);background:var(--cs-bg-card);color:var(--cs-text);font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:700;cursor:pointer;transition:all .2s}
+.donate-btn:hover{border-color:var(--cs-accent);background:var(--cs-accent-dim);color:var(--cs-accent)}
+.donate-btn.selected{border-color:var(--cs-accent);background:var(--cs-accent-dim);color:var(--cs-accent);box-shadow:0 0 20px var(--cs-accent-glow)}
+.donate-custom{width:100%;padding:14px;border-radius:12px;border:1px solid var(--cs-border);background:var(--cs-bg-card);color:var(--cs-text);font-size:1rem;margin-bottom:16px;font-family:'Inter',sans-serif}
+.donate-submit{width:100%;padding:16px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--cs-accent),#22d3ee);color:#000;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;transition:all .2s;margin-bottom:16px}
+.donate-submit:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--cs-accent-glow)}
+.donate-progress{margin-top:20px}
+.donate-progress .bar{height:8px;background:var(--cs-bg-card);border-radius:100px;overflow:hidden;margin-bottom:8px}
+.donate-progress .fill{height:100%;background:linear-gradient(90deg,var(--cs-accent),#22d3ee);border-radius:100px;transition:width .5s ease;width:0%}
+.donate-progress .info{font-size:.8rem;color:var(--cs-text-muted)}
+.donate-thanks{display:none;margin-top:20px;padding:16px;border-radius:12px;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);color:var(--cs-green)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.9rem}
+th{text-align:left;padding:10px 12px;font-weight:600;border-bottom:2px solid var(--cs-border);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+td{padding:10px 12px;border-bottom:1px solid var(--cs-border);color:var(--cs-text-muted)}
+td:first-child{color:var(--cs-text);font-weight:500}
+.improv-card{padding:24px;margin-bottom:16px}
+.improv-card h3{font-size:1.1rem;margin-bottom:8px;color:var(--cs-accent)}
+.improv-card p{color:var(--cs-text-muted);font-size:.9rem}
+.improv-card .tag{display:inline-block;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:100px;background:var(--cs-accent-dim);color:var(--cs-accent);margin-right:6px;margin-bottom:8px}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-top:20px}
+.team-card{padding:20px;text-align:center}
+.team-card .avatar{width:64px;height:64px;border-radius:50%;background:var(--cs-accent-dim);border:2px solid var(--cs-accent-glow);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.5rem}
+.team-card h4{font-size:1rem;margin-bottom:4px}
+.team-card .role{font-size:.75rem;color:var(--cs-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.team-card p{font-size:.8rem;color:var(--cs-text-muted)}
+.cta-section{text-align:center;padding:40px 24px;margin:20px 0}
+.cta-section h2{font-size:1.6rem;margin-bottom:12px}
+.cta-section p{color:var(--cs-text-muted);margin-bottom:24px}
+.cta-btn{display:inline-block;padding:14px 32px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--cs-accent),#22d3ee);color:#000;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;transition:all .2s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--cs-accent-glow)}
+.footer{position:relative;z-index:1;text-align:center;padding:30px 24px;font-size:.75rem;color:var(--cs-text-muted);border-top:1px solid var(--cs-border)}
+@media(max-width:640px){.hero h1{font-size:1.8rem}.hero-stats{gap:16px}.hero-stat .val{font-size:1.5rem}.chapter-grid{grid-template-columns:1fr}.donate-amounts{grid-template-columns:repeat(2,1fr)}.team-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<nav class="nav">
+<a href="#" class="nav-logo"><svg aria-hidden="true" style="display:inline-block;vertical-align:-6px;margin-right:9px" width="26" height="26" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="var(--cs-accent)" stroke="rgba(255,255,255,.85)" stroke-width="3.5"/><path d="M50 26 L74 72 L61 72 L50 48 L39 72 L26 72 Z" fill="#ffffff"/><rect x="37" y="52" width="26" height="8" rx="2" fill="#ffffff" opacity=".72"/></svg><span>Tesselaars Dal</span> Farm</a>
+<button class="theme-cycle-btn" id="themeCycleBtn" title="Cycle theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg></button>
+</nav>
+<header class="hero-full">
+<div class="hero-bg" style="background-image:url('https://images.prop24.com/384861767/Ensure1280x720')">
+<div class="hero-overlay">
+<div class="hero-greeting">Greetings from Tesselaars Dal Land Regeneration Project</div>
+<h1>The Land That Feeds Itself</h1>
+<p class="hero-tagline">A self-sustaining syntropic farm in the Western Cape — healing the land, growing abundance, and building a community around regeneration. Registered as a Public Benefit Organisation (PBO) with Section 18A tax-deductible donation status. Inspired by Auroville, the City of Dawn — a 57-year surviving experiment in human unity and sustainable living.</p>
+<div class="hero-cta-row">
+<a href="#sec-donate" class="cta-btn" onclick="showSection('donate')">Make a Donation</a>
+<a href="#sec-overview" class="cta-btn-outline" onclick="showSection('overview')">Explore the Vision</a>
+</div>
+</div>
+</div>
+<div class="hero-carousel">
+<img src="https://images.prop24.com/384861767/Ensure960x540" alt="Property view" class="carousel-img active">
+<img src="https://images.prop24.com/384861768/Ensure960x540" alt="Study" class="carousel-img">
+<img src="https://images.prop24.com/384861769/Ensure960x540" alt="Main bedroom" class="carousel-img">
+<img src="https://images.prop24.com/384861770/Ensure960x540" alt="Bedroom" class="carousel-img">
+<img src="https://images.prop24.com/384861771/Ensure960x540" alt="Bathroom" class="carousel-img">
+<img src="https://images.prop24.com/384861774/Ensure960x540" alt="Kitchen" class="carousel-img">
+<img src="https://cdn.pixabay.com/photo/2018/03/08/13/14/flora-3208629_640.jpg" alt="Greenhouse plants" class="carousel-img">
+<img src="https://cdn.pixabay.com/photo/2020/04/18/21/58/seedlings-5061178_640.jpg" alt="Seedlings" class="carousel-img">
+<img src="https://cdn.pixabay.com/photo/2018/05/26/16/44/sheep-3431759_640.jpg" alt="Farm animals" class="carousel-img">
+<img src="https://cdn.pixabay.com/photo/2017/10/29/15/58/trees-2900064_640.jpg" alt="Farm landscape" class="carousel-img">
+<img src="https://cdn.pixabay.com/photo/2021/06/23/12/47/wheat-6358659_640.jpg" alt="Agricultural field" class="carousel-img">
+<img src="https://cdn.pixabay.com/photo/2018/04/17/11/24/agriculture-3327299_640.jpg" alt="Sustainable agriculture" class="carousel-img">
+</div>
+<div class="hero-stats-bar">
+<div class="hero-stat"><div class="val">4.3 ha</div><div class="lbl">Land</div></div>
+<div class="hero-stat"><div class="val">3,600 L/h</div><div class="lbl">Borehole</div></div>
+<div class="hero-stat"><div class="val">30 kW</div><div class="lbl">Solar</div></div>
+<div class="hero-stat"><div class="val">R2.5bn</div><div class="lbl">RMB Bond</div></div>
+<div class="hero-stat"><div class="val">R 1.3M+</div><div class="lbl">Year 3 Revenue</div></div>
+<div class="hero-stat"><div class="val">22</div><div class="lbl">Chapters</div></div>
+</div>
+</header>
+
+<style>
+.hero-full{position:relative;z-index:1}
+.hero-bg{background-size:cover;background-position:center;min-height:70vh;display:flex;align-items:center;justify-content:center}
+.hero-overlay{background:linear-gradient(180deg,rgba(6,10,20,.75) 0%,rgba(6,10,20,.55) 50%,rgba(6,10,20,.85) 100%);padding:80px 24px 60px;text-align:center;width:100%}
+.hero-greeting{font-family:'Montserrat',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cs-accent);margin-bottom:16px}
+.hero-overlay h1{font-size:clamp(2.5rem,6vw,4rem);margin-bottom:20px;background:linear-gradient(135deg,var(--cs-accent),#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 14px var(--cs-accent-glow))}
+.hero-tagline{color:var(--cs-text-muted);font-size:1.1rem;max-width:700px;margin:0 auto 32px;line-height:1.7}
+.hero-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn{display:inline-block;padding:14px 32px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--cs-accent),#22d3ee);color:#000;font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;transition:all .2s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px var(--cs-accent-glow)}
+.cta-btn-outline{display:inline-block;padding:14px 32px;border-radius:12px;border:2px solid var(--cs-accent-glow);background:transparent;color:var(--cs-accent);font-family:'Montserrat',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all .2s;text-decoration:none}
+.cta-btn-outline:hover{background:var(--cs-accent-dim);transform:translateY(-2px)}
+.hero-carousel{display:flex;gap:8px;overflow-x:auto;padding:20px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.hero-carousel::-webkit-scrollbar{height:6px}
+.hero-carousel::-webkit-scrollbar-track{background:var(--cs-bg-card);border-radius:3px}
+.hero-carousel::-webkit-scrollbar-thumb{background:var(--cs-accent);border-radius:3px}
+.carousel-img{width:280px;height:160px;object-fit:cover;border-radius:10px;flex-shrink:0;scroll-snap-align:start;opacity:.7;transition:opacity .3s}
+.carousel-img:hover,.carousel-img.active{opacity:1}
+.hero-stats-bar{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;padding:24px;background:rgba(6,10,20,.6);backdrop-filter:blur(10px)}
+.hero-stat{text-align:center}
+.hero-stat .val{font-family:'Montserrat',sans-serif;font-size:1.6rem;font-weight:800;color:var(--cs-accent)}
+.hero-stat .lbl{font-size:.7rem;color:var(--cs-text-muted);text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:640px){.hero-bg{min-height:60vh}.hero-overlay h1{font-size:2rem}.hero-tagline{font-size:1rem}.carousel-img{width:200px;height:120px}.hero-stats-bar{gap:12px}.hero-stat .val{font-size:1.3rem}}
+</style>
+
+<script>
+(function(){
+var imgs=document.querySelectorAll('.carousel-img');
+var idx=0;
+function showNext(){imgs[idx].classList.remove('active');idx=(idx+1)%imgs.length;imgs[idx].classList.add('active')}
+if(imgs.length>1){imgs[0].classList.add('active');setInterval(showNext,3000)}
+})();
+</script>
+<div class="chapters" id="mainView">
+<div class="chapter-label">Chapters</div>
+<div class="chapter-grid">
+<div class="chapter-card glass glass-hover" onclick="showSection('overview')"><img class="card-img" src="https://cdn.pixabay.com/photo/2017/10/29/15/58/trees-2900064_640.jpg" alt="Farm landscape"><div class="num">01</div><h3>Overview</h3><p>A self-sustaining ecosystem that pays for itself.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('property')"><img class="card-img" src="https://images.prop24.com/384861767/Ensure1280x720" alt="Property"><div class="num">02</div><h3>The Property</h3><p>Portion 163 of Farm 811, Tesselaarsdal.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('landhealth')"><img class="card-img" src="https://cdn.pixabay.com/photo/2021/06/23/12/47/wheat-6358659_640.jpg" alt="Field"><div class="num">03</div><h3>Land Health & History</h3><p>Degraded soils and invasive wattle in the Overberg.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('solution')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/03/08/13/14/flora-3208629_640.jpg" alt="Greenhouse"><div class="num">04</div><h3>The Solution</h3><p>Syntropic farming, aquaponics, biodynamic practices.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('gaia')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/04/17/11/24/agriculture-3327299_640.jpg" alt="Food forest"><div class="num">05</div><h3>Gaia Sanctuary Plan</h3><p>Daily 3-hour task blocks with reaction time.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('production')"><img class="card-img" src="https://cdn.pixabay.com/photo/2020/04/18/21/58/seedlings-5061178_640.jpg" alt="Seedlings"><div class="num">06</div><h3>Production Model</h3><p>How 3,600 m² generates revenue season upon season.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('revenue')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/05/26/16/44/sheep-3431759_640.jpg" alt="Livestock"><div class="num">07</div><h3>Revenue Streams</h3><p>Five integrated income streams.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('verification')"><img class="card-img" src="https://cdn.pixabay.com/photo/2020/04/18/21/58/seedlings-5061178_640.jpg" alt="Seedlings"><div class="num">08</div><h3>Verification</h3><p>Proving water retention and soil moisture.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('trust')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/04/17/11/24/agriculture-3327299_640.jpg" alt="Agriculture"><div class="num">09</div><h3>Land Stewardship Trust</h3><p>Land stewards pitching projects for approval.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('bio')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/03/08/13/14/flora-3208629_640.jpg" alt="Gardening"><div class="num">10</div><h3>Bio</h3><p>7 years of serious permaculture and aquaponics.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('team')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/05/26/16/44/sheep-3431759_640.jpg" alt="Team"><div class="num">11</div><h3>Team</h3><p>Farm manager, 2 biodynamic teams, 2 volunteers.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('improv')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/03/08/13/14/flora-3208629_640.jpg" alt="Greenhouse"><div class="num">12</div><h3>Improvisation</h3><p>Recycled greenhouses, storm-proofing, mycelium hugel beds.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('partnerships')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/04/17/11/24/agriculture-3327299_640.jpg" alt="Partnerships"><div class="num">13</div><h3>Partnerships</h3><p>Waldorf networks, Afrikara at Hoekiesdam, Gaia Sanctuary.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('model')"><img class="card-img" src="https://cdn.pixabay.com/photo/2017/10/29/15/58/trees-2900064_640.jpg" alt="Worker model"><div class="num">14</div><h3>Worker Model</h3><p>Profit sharing, kickbacks, and community ownership.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('future')"><img class="card-img" src="https://cdn.pixabay.com/photo/2020/04/18/21/58/seedlings-5061178_640.jpg" alt="Future goals"><div class="num">15</div><h3>Future Goals</h3><p>Demeter certification pathway and export licensing.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('hr')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/05/26/16/44/sheep-3431759_640.jpg" alt="HR plan"><div class="num">16</div><h3>HR Plan</h3><p>Recruitment, training, volunteer programme, worker welfare.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('pr')"><img class="card-img" src="https://cdn.pixabay.com/photo/2021/06/23/12/47/wheat-6358659_640.jpg" alt="PR and communications"><div class="num">17</div><h3>PR & Communications</h3><p>Brand identity, channels, media relations, partnerships.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('operations')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/03/08/13/14/flora-3208629_640.jpg" alt="Events and festivals"><div class="num">18</div><h3>Events & Festivals</h3><p>Open days, 4 festivals/year, OZORA vision, free harvest meals.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('financials')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/04/17/11/24/agriculture-3327299_640.jpg" alt="Financial plan"><div class="num">19</div><h3>Financial Plan</h3><p>Funding requirements, impact projections, and tax benefits.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('risks')"><img class="card-img" src="https://cdn.pixabay.com/photo/2020/04/18/21/58/seedlings-5061178_640.jpg" alt="Risk and mitigation"><div class="num">20</div><h3>Risk & Mitigation</h3><p>Known risks and how we manage them.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('ask')"><img class="card-img" src="https://cdn.pixabay.com/photo/2017/10/29/15/58/trees-2900064_640.jpg" alt="The ask"><div class="num">21</div><h3>The Ask</h3><p>Tax-deductible donation tiers and how to support the project.</p></div>
+<div class="chapter-card glass glass-hover" onclick="showSection('donate')"><img class="card-img" src="https://cdn.pixabay.com/photo/2018/05/26/16/44/sheep-3431759_640.jpg" alt="Support us"><div class="num">22</div><h3>Support Us</h3><p>Help us acquire the property and train land stewards.</p></div>
+</div>
+</div>
+
+<div class="section-full" id="sec-overview" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Overview</h2>
+<p>Tesselaars Dal Land Regeneration Project is the pilot project of a Land Stewardship Trust — a portfolio of regenerative agriculture projects across the Western Cape. The trust approves and supports land stewards who pitch projects to revitalise and nurture degraded land.</p>
+<p>This 4.3-hectare property in the Overberg combines black wattle clearing (in partnership with the FirstRand/RMB ecological restoration bond), syntropic agroforestry, aquaponics, and education to create a self-sustaining ecosystem that generates revenue while restoring the land.</p>
+<p>The property comes with existing infrastructure: a 3-bedroom off-grid home with 30kW solar, a borehole producing 3,600 litres/hour, a million-litre dam, a 1-bedroom cottage, a workshop, and 1,600 m² of terraced growing land already under organic management.</p>
+</div>
+
+<div class="section-full" id="sec-property" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>The Property</h2>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0">
+<img src="https://images.prop24.com/384861767/Ensure640x360" alt="Property photo 1" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861768/Ensure640x360" alt="Property photo 2" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861769/Ensure640x360" alt="Property photo 3" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861770/Ensure640x360" alt="Property photo 4" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861771/Ensure640x360" alt="Property photo 5" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861772/Ensure640x360" alt="Property photo 6" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861773/Ensure640x360" alt="Property photo 7" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861774/Ensure640x360" alt="Property photo 8" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861775/Ensure640x360" alt="Property photo 9" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861776/Ensure640x360" alt="Property photo 10" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861777/Ensure640x360" alt="Property photo 11" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861778/Ensure640x360" alt="Property photo 12" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861779/Ensure640x360" alt="Property photo 13" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861780/Ensure640x360" alt="Property photo 14" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861781/Ensure640x360" alt="Property photo 15" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861782/Ensure640x360" alt="Property photo 16" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861783/Ensure640x360" alt="Property photo 17" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861784/Ensure640x360" alt="Property photo 18" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861785/Ensure640x360" alt="Property photo 19" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861786/Ensure640x360" alt="Property photo 20" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861787/Ensure640x360" alt="Property photo 21" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861788/Ensure640x360" alt="Property photo 22" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861789/Ensure640x360" alt="Property photo 23" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861790/Ensure640x360" alt="Property photo 24" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861791/Ensure640x360" alt="Property photo 25" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861792/Ensure640x360" alt="Property photo 26" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861793/Ensure640x360" alt="Property photo 27" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861794/Ensure640x360" alt="Property photo 28" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861795/Ensure640x360" alt="Property photo 29" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+<img src="https://images.prop24.com/384861796/Ensure640x360" alt="Property photo 30" style="width:100%;border-radius:8px;aspect-ratio:4/3;object-fit:cover">
+</div>
+<p>Located 24 minutes from Caledon and 50 minutes from Hermanus, organically farmed for 13 years.</p>
+<h3>Existing Infrastructure</h3>
+<ul><li>3-bedroom house, 2 bathrooms</li><li>30 kW solar — fully off-grid</li><li>Borehole: 3,600 litres/hour</li><li>Million-litre dam</li><li>1-bedroom cottage</li><li>Workshop</li></ul>
+<h3>Growing Assets</h3>
+<ul><li>1,600 m² terraced growing area</li><li>Rich clay soil, 13 years organic</li><li>Fruit trees, vegetable gardens</li><li>Yellowwood forest on border</li></ul>
+</div>
+
+<div class="section-full" id="sec-landhealth" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Land Health & History</h2>
+<img src="https://cdn.pixabay.com/photo/2021/06/23/12/47/wheat-6358659_1280.jpg" alt="Agricultural field">
+<h3>Historical Land Use</h3>
+<p>Tesselaarsdal is a dispersed rural settlement in the Theewaterskloof Municipality, 20 km south of Caledon. The Western Cape has a long history of human occupation, with colonial settlement from the late 17th century transforming the landscape through European-style crop farming and monoculture wheat and sheep production.</p>
+<h3>Current Land Degradation</h3>
+<ul>
+<li><strong>Invasive alien vegetation</strong> — black wattle, pines, blue gum reduce water yields by 15–30%</li>
+<li><strong>Soil erosion</strong> — water and wind erosion on overgrazed and monoculture land</li>
+<li><strong>Soil compaction</strong> — from heavy machinery and overgrazing</li>
+<li><strong>Loss of soil organic carbon</strong> — decades of conventional farming</li>
+<li><strong>Biodiversity loss</strong> — habitat destruction from land clearing and invasive species</li>
+</ul>
+<h3>Theewaterskloof Catchment</h3>
+<p>The farm sits within the Theewaterskloof Dam catchment — a critical water source for Cape Town's 4.8 million residents. The R2.5 billion FirstRand/RMB ecological restoration bond specifically targets this catchment for invasive vegetation removal.</p>
+</div>
+
+<div class="section-full" id="sec-solution" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>The Solution</h2>
+<img src="https://cdn.pixabay.com/photo/2018/03/08/13/14/flora-3208629_1280.jpg" alt="Greenhouse plants">
+<p>Syntropic farming, developed by Ernst Götsch, choreographs plant succession through time — mimicking how a forest naturally regenerates — to produce food while restoring soil, water cycles, and biodiversity.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px">
+<div class="glass glass-hover" style="padding:16px"><strong>Wattle Clearing</strong><p style="font-size:.8rem;margin-top:8px">RMB bond funds clearing.</p></div>
+<div class="glass glass-hover" style="padding:16px"><strong>Syntropic Systems</strong><p style="font-size:.8rem;margin-top:8px">Stratified agroforestry rows.</p></div>
+<div class="glass glass-hover" style="padding:16px"><strong>Aquaponics</strong><p style="font-size:.8rem;margin-top:8px">Fish, plants, and water features.</p></div>
+<div class="glass glass-hover" style="padding:16px"><strong>Climate-Controlled</strong><p style="font-size:.8rem;margin-top:8px">Greenhouses for rare plants.</p></div>
+<div class="glass glass-hover" style="padding:16px"><strong>Biodynamic 100%</strong><p style="font-size:.8rem;margin-top:8px">Closed-loop fertility.</p></div>
+<div class="glass glass-hover" style="padding:16px"><strong>Education</strong><p style="font-size:.8rem;margin-top:8px">Teach people to grow and secure their future.</p></div>
+</div>
+</div>
+
+<div class="section-full" id="sec-gaia" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Gaia Sanctuary — Holistic Food Garden Plan</h2>
+<p>Tasks are documented for each day at <strong>3-hour blocks</strong>. This leaves ample time for damage control and reaction.</p>
+<table>
+<thead><tr><th>Block</th><th>Duration</th><th>Activity</th></tr></thead>
+<tbody>
+<tr><td>Block 1</td><td>3 hours</td><td>Primary daily task (planting, harvesting, clearing, building)</td></tr>
+<tr><td>Reaction Time</td><td>Remaining day</td><td>Damage control, improvisation, reactive work, documentation, rest</td></tr>
+</tbody>
+</table>
+<p>The land always has the final word — the 3-hour blocks guarantee forward momentum, and the open reaction time ensures we can respond to what the land actually needs.</p>
+</div>
+
+<div class="section-full" id="sec-production" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Production Model — Revenue from the Land</h2>
+<p>Calculated for the existing 1,600 m² covered growing space plus 2 outdoor patches of 1,000 m² each (3,600 m² total production area) on the 4.3 ha property. Yields based on syntropic farming research (Gotsch, GrowPerma 2026) and South African aquaponics industry data.</p>
+<h3>Land Allocation</h3>
+<table>
+<thead><tr><th>Zone</th><th>Area</th><th>Use</th><th>Established</th></tr></thead>
+<tbody>
+<tr><td>Covered terraces (irrigated)</td><td>1,600 m²</td><td>Intensive vegetables, aquaponics, seedlings, climate-controlled propagation</td><td>Existing</td></tr>
+<tr><td>Outdoor Patch A</td><td>1,000 m²</td><td>Syntropic rows: fruit trees, vegetables, support species</td><td>Year 1</td></tr>
+<tr><td>Outdoor Patch B</td><td>1,000 m²</td><td>Acclimated bigger trees: orchard, timber, syntropic succession</td><td>Year 2</td></tr>
+</tbody>
+</table>
+<h3>Syntropic System Timeline (Outdoor Patches A + B)</h3>
+<p>Based on Ernst Gotsch's succession model: Colonisation (Years 0-3), Accumulation (Years 3-15), Abundance (Year 15+). Western Cape Mediterranean climate yields are 40-60% of tropical rates.</p>
+<table>
+<thead><tr><th>Year</th><th>Phase</th><th>Dominant Species</th><th>Expected Yield (2,000 m²)</th></tr></thead>
+<tbody>
+<tr><td>Year 1</td><td>Colonisation</td><td>Pioneers: comfrey, pigeon pea, buckwheat, annual vegetables</td><td>800-1,200 kg vegetables (mostly annuals)</td></tr>
+<tr><td>Year 2</td><td>Late colonisation</td><td>First bananas, papaya, sweet potato</td><td>1,500-2,500 kg (annuals + first perennials)</td></tr>
+<tr><td>Year 3</td><td>Accumulation begins</td><td>Canopy closes, bananas 30 kg/plant, papaya 40 kg/plant, early fruit</td><td>3,000-5,000 kg (perennials become major channel)</td></tr>
+<tr><td>Year 4</td><td>Accumulation</td><td>Citrus, stone fruit, increased density</td><td>5,000-8,000 kg</td></tr>
+<tr><td>Year 5</td><td>Accumulation</td><td>Full perennial production, first timber harvest</td><td>8,000-12,000 kg</td></tr>
+</tbody>
+</table>
+<h3>Covered Space Production (1,600 m²)</h3>
+<h4>Aquaponics (200 m²)</h4>
+<ul>
+<li>Tilapia: 20 kg/m³/year in 50 m³ tanks = <strong>1,000 kg fish/year</strong></li>
+<li>Leafy greens: 30 kg/m²/year on 150 m² grow beds = <strong>4,500 kg/year</strong></li>
+<li>Water: closed-loop, 95% recirculated, dam + borehole top-up</li>
+</ul>
+<h4>Intensive Vegetables (800 m²)</h4>
+<ul>
+<li>Year 1 (existing gardens): garlic, onions, potatoes = <strong>8,000-12,000 kg/year</strong></li>
+<li>Year 2+ (succession): leafy greens, brassicas, herbs = <strong>12,000-18,000 kg/year</strong></li>
+</ul>
+<h4>Climate-Controlled Propagation (400 m²)</h4>
+<ul>
+<li>Seedlings for on-farm use + sale: <strong>20,000-30,000 seedlings/year</strong></li>
+<li>Rare plant conservation: propagation of indigenous species</li>
+</ul>
+<h4>Greenhouse Production (200 m²)</h4>
+<ul>
+<li>Year-round tomatoes, peppers, herbs = <strong>3,000-5,000 kg/year</strong></li>
+</ul>
+<h3>Revenue Calculation (Year 3 — Target)</h3>
+<table>
+<thead><tr><th>Product</th><th>Annual Volume</th><th>Price/kg</th><th>Annual Revenue</th></tr></thead>
+<tbody>
+<tr><td>Tilapia (aquaponics)</td><td>1,000 kg</td><td>R 60</td><td>R 60,000</td></tr>
+<tr><td>Leafy greens (aquaponics)</td><td>4,500 kg</td><td>R 25</td><td>R 112,500</td></tr>
+<tr><td>Vegetables (intensive)</td><td>15,000 kg</td><td>R 20</td><td>R 300,000</td></tr>
+<tr><td>Greenhouse produce</td><td>4,000 kg</td><td>R 35</td><td>R 140,000</td></tr>
+<tr><td>Fruit & perennials (syntropic)</td><td>4,000 kg</td><td>R 30</td><td>R 120,000</td></tr>
+<tr><td>Seedlings (propagation)</td><td>25,000 units</td><td>R 5</td><td>R 125,000</td></tr>
+<tr><td><strong>Total Produce Revenue</strong></td><td></td><td></td><td><strong>R 857,500</strong></td></tr>
+</tbody>
+</table>
+<h3>Aquaponics System Cost — 3 Flowbin Setup</h3>
+<p>Based on Flowbins (Pty) Ltd Executive DIY Starter Kit pricing (South Africa, 2026). Each system covers approximately 25-30 m² of grow bed area.</p>
+<table>
+<thead><tr><th>Component</th><th>Specification</th><th>Cost (R)</th></tr></thead>
+<tbody>
+<tr><td>Flowbin Executive Kit</td><td>1000L fish tank, 500L sump, 3 x 300L grow beds, syphons, pump, timer, air pump, piping</td><td>R 10,100</td></tr>
+<tr><td>Tools (installation)</td><td>Drill, hole saw set, silicone gun, measuring tape, spirit level, spanners, PPE</td><td>R 2,000</td></tr>
+<tr><td>Grow media</td><td>Clay pebbles (LECA) for 3 x 300L beds = 900L media</td><td>R 1,800</td></tr>
+<tr><td>Fish stock</td><td>100 tilapia fingerlings @ R 5 each</td><td>R 500</td></tr>
+<tr><td>Seeds & seedlings</td><td>Initial planting stock for 3 beds</td><td>R 300</td></tr>
+<tr><td>Water testing kit</td><td>pH, ammonia, nitrite, nitrate test kit</td><td>R 500</td></tr>
+<tr><td>Labour (installation)</td><td>2 people x 8 hours @ R 150/hour</td><td>R 2,400</td></tr>
+<tr><td>Miscellaneous</td><td>Cable ties, sealant, extra fittings, transport</td><td>R 1,000</td></tr>
+<tr><td><strong>Total per 3-flowbin system</strong></td><td></td><td><strong>R 18,600</strong></td></tr>
+</tbody>
+</table>
+<h4>Farm Aquaponics Build-out (200 m²)</h4>
+<table>
+<thead><tr><th>Item</th><th>Quantity</th><th>Unit Cost</th><th>Total</th></tr></thead>
+<tbody>
+<tr><td>3-flowbin systems</td><td>7 systems (covers ~200 m²)</td><td>R 18,600</td><td>R 130,200</td></tr>
+<tr><td>Plumbing & electrical</td><td>Pumps, timers, wiring, irrigation</td><td>1 lot</td><td>R 15,000</td></tr>
+<tr><td>Greenhouse covering</td><td>Shade cloth + structure for aquaponics area</td><td>1 lot</td><td>R 25,000</td></tr>
+<tr><td><strong>Total Aquaponics Infrastructure</strong></td><td></td><td></td><td><strong>R 170,200</strong></td></tr>
+</tbody>
+</table>
+<p>Source: Flowbins (Pty) Ltd, flowbinproperties.com, Executive DIY Starter Kit @ R 10,100 (accessed 2026-10-14). Tools and labour estimated at South African rates.</p>
+<h3>Competitive Advantage</h3>
+<ul>
+<li><strong>Existing infrastructure</strong> — off-grid solar, borehole, dam, terraced land = 6-month head start over bare-land projects</li>
+<li><strong>Water security</strong> — 3,600 L/h borehole + million-litre dam = drought resilience unmatched in the region</li>
+<li><strong>Proven model</strong> — 2 years of successful food forest at Gaia demonstrates capability</li>
+<li><strong>Revenue diversity</strong> — 5 independent streams reduce risk vs. single-crop farms</li>
+<li><strong>Bond alignment</strong> — direct eligibility for RMB ecological restoration funding</li>
+</ul>
+</div>
+
+<div class="section-full" id="sec-revenue" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Revenue Streams</h2>
+<img src="https://cdn.pixabay.com/photo/2018/05/26/16/44/sheep-3431759_1280.jpg" alt="Farm with livestock">
+<div class="glass glass-hover" style="padding:20px;margin-bottom:12px"><h3>1. Ecological Restoration Bond (Primary — Years 1-3)</h3><p>The FirstRand/RMB R2.5 billion Cape Water Performance-based Bond rewards investors based on measured improvements in Cape Town water catchments through invasive vegetation removal. Our 4.3 ha property sits within the Theewaterskloof catchment — a priority area for the bond. Revenue is generated per hectare of verified wattle clearing, providing immediate cash flow during the capital-intensive establishment phase.</p><p><strong>Estimated: R 300,000 – R 600,000/year</strong></p></div>
+<div class="glass glass-hover" style="padding:20px;margin-bottom:12px"><h3>2. Carbon Credits (Years 2-5)</h3><p>South African carbon programs (Verra VCS VM0042/VM0047) pay R 142 – R 500 per tonne CO₂e. Syntropic systems sequester 5-15 tCO₂e/ha/year at maturity. On 4.3 ha, this generates 21-64 tCO₂e/year. Registration with a South African carbon program (Orizon CarbonCrop or Cultivating Carbon) provides the MRV pipeline, verification, and credit issuance. Up to 75% of carbon revenue flows to the farm.</p><p><strong>Estimated: R 5,000 – R 50,000/year</strong></p></div>
+<div class="glass glass-hover" style="padding:20px;margin-bottom:12px"><h3>3. Produce Sales (Years 1-5)</h3><p>Year 1: Existing gardens (garlic, onions, potatoes) + aquaponics fish + poultry eggs. Year 2+: syntropic fruits, nuts, vegetables, value-added products (preserves, dried herbs). Markets: Overberg farmers' markets, Hermanus/Caledon restaurants, online organic produce boxes. Full production by Year 3.</p><p><strong>Estimated: R 857,500/year at target</strong></p></div>
+<div class="glass glass-hover" style="padding:20px;margin-bottom:12px"><h3>4. Eco-Tourism & Accommodation (Years 1-5)</h3><p>The 1-bedroom cottage and main house guest rooms offer farm-stay experiences. The picturesque setting — mountain views, landscaped aquaponics, mature food forest — is a destination in itself. Target: 30% occupancy at R 800/night average.</p><p><strong>Estimated: R 80,000 – R 250,000/year</strong></p></div>
+<div class="glass glass-hover" style="padding:20px;margin-bottom:12px"><h3>5. Biodynamic Training (Busy Side Hustle — Years 2-5)</h3><p>Workshops, internships, and a structured training curriculum. The project becomes a study site for biodynamic syntropic farming — the first of its kind in the Western Cape at this scale. Weekend workshops (R 2,500/person), 5-day internships (R 8,000/person), and online courses.</p><p><strong>Estimated: R 100,000 – R 350,000/year</strong></p></div>
+</div>
+
+<div class="section-full" id="sec-verification" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Verification & Monitoring</h2>
+<img src="https://cdn.pixabay.com/photo/2020/04/18/21/58/seedlings-5061178_1280.jpg" alt="Seedlings">
+<h3>Soil Moisture Monitoring</h3>
+<ul><li>Capacitance probes at 10cm, 30cm, 60cm depths</li><li>Tensiometers, TDR/FDR sensors</li><li>Data loggers with GSM/LoRa uplink</li></ul>
+<h3>Water Balance Tracking</h3>
+<ul><li>Borehole flow meter</li><li>Rainfall gauge</li><li>Irrigation metering</li><li>Dam level sensors</li></ul>
+<h3>Satellite Verification</h3>
+<ul><li>NDVI — vegetation health</li><li>Land Surface Temperature</li><li>SAR — soil moisture from space</li><li>Sentinel-2 / Landsat</li></ul>
+</div>
+
+<div class="section-full" id="sec-trust" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Land Stewardship Trust</h2>
+<img src="https://cdn.pixabay.com/photo/2018/04/17/11/24/agriculture-3327299_1280.jpg" alt="Sustainable agriculture">
+<p>A legal entity overseeing multiple properties across the Western Cape. Land stewards pitch projects for approval, funding, and support.</p>
+<h3>How It Works</h3>
+<ol><li><strong>Application</strong> — Submit project proposal</li><li><strong>Assessment</strong> — Evaluate biodiversity, water, soil, social impact</li><li><strong>Approval</strong> — Stewardship agreement signed</li><li><strong>Support</strong> — RMB bond funds, carbon pre-payments, grants</li><li><strong>Verification</strong> — Annual audits</li></ol>
+<p>Aligned with South Africa's Biodiversity Stewardship framework (SANBI / CapeNature).</p>
+</div>
+
+<div class="section-full" id="sec-partnerships" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Partnerships & Collaborative Network</h2>
+<h3>Freunde der Erziehungskunst Rudolf Steiners e. V.</h3>
+<p>The <strong>Friends of Waldorf Education</strong> (Freunde der Erziehungskunst Rudolf Steiners e. V.) is a German charity association founded in 1971, registered in Stuttgart. As the umbrella organisation for Waldorf education worldwide, they foster initiatives for free education and organisations working on the basis of Waldorf education. Through their volunteer service programmes, they connect volunteers with Waldorf-inspired agricultural and education projects globally.</p>
+<p><strong>How we engage:</strong> Volunteers through Freunde der Erziehungskunst contribute practical farm work in exchange for learning opportunities in biodynamic farming, syntropic agriculture, and Waldorf education. The Federation of Waldorf Schools of Southern Africa (waldorf.org.za) is our local connection point.</p>
+<h3>Afrikara Biodynamic Farm & Community — Hoekiesdam Farm</h3>
+<p><strong>Afrikara</strong> (afrikara.co.za) is an established socio-agricultural community at Hoekiesdam Farm, near Wolseley in the Western Cape. They practise biodynamic permaculture, produce organic dairy, lamb, wool, eggs, vegetables, herbs, and honey, and host Waldorf-themed youth camps focused on learning through authentic farm activities.</p>
+<p><strong>Collaboration potential:</strong> Knowledge exchange on biodynamic preparations, shared volunteer programmes, joint training workshops, and potential for shared marketing of biodynamic produce. Afrikara demonstrates that a working biodynamic farm community is viable in the Western Cape.</p>
+<h3>Gaia Sanctuary</h3>
+<p>Gaia Sanctuary is the founder's existing food forest project — 2 years of proven syntropic farming with established soil, mycelium-rich hugel beds, a productive canopy, and fruit tree and vegetable/herb guilds. Gaia serves as the <strong>proof-of-concept</strong> for the methods Tesselaars Dal Land Regeneration Project will scale.</p>
+<h3>The Model: A Network of Land Stewardship Projects</h3>
+<p>This is not a single-farm project. It is a <strong>replicable model</strong> for land stewardship that can be applied at Hoekiesdam Farm, Gaia Sanctuary, and other properties across the Western Cape. Each site adapts the syntropic + biodynamic + aquaponics framework to its specific context, while sharing resources, training, and market access through the trust.</p>
+</div>
+
+<div class="section-full" id="sec-model" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Worker Model — Kickbacks & Profit Sharing</h2>
+<p>The farm operates on a <strong>worker-partnership model</strong> where everyone who works on the land shares in the bounty. The earth is rejuvenated as the primary purpose; the produce and revenue are the side product of that relationship.</p>
+<h3>How It Works</h3>
+<ul>
+<li><strong>Base compensation:</strong> All workers receive fair wages for their role and hours</li>
+<li><strong>Sales kickbacks:</strong> A percentage of all produce and product sales is distributed to the team as a bonus — the better the farm performs, the more everyone earns</li>
+<li><strong>Ownership pathway:</strong> Long-term team members can transition to equity partners, owning a share of the revenue stream they help build</li>
+<li><strong>Volunteer programme:</strong> Volunteers receive training, accommodation, and meals in exchange for their labour — they are not paid a wage but share in the learning and community</li>
+</ul>
+<p>This model ensures that everyone who contributes to the farm's success shares in its rewards — aligning incentives, building loyalty, and creating a self-sustaining community around the land.</p>
+</div>
+
+<div class="section-full" id="sec-resident" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Resident Project Programme</h2>
+<p>The Tesselaars Dal Land Regeneration Project is not just a farm — it is a <strong>land-based incubator</strong> where people can come to live, work, and build real projects that regenerate the earth and serve the community. We provide the land, infrastructure, funding, and staff support. You bring the vision and the work.</p>
+<h3>How It Works</h3>
+<ol>
+<li><strong>Apply:</strong> Submit a project proposal — what you want to build, who it serves, and how it aligns with land regeneration</li>
+<li><strong>Assessment:</strong> The trust evaluates feasibility, impact, and alignment with the mission</li>
+<li><strong>Approval:</strong> Successful applicants receive land access, accommodation, and a project budget</li>
+<li><strong>Build:</strong> Live on the land and develop your project with ongoing support</li>
+<li><strong>Share:</strong> Your project becomes part of the farm's ecosystem — contributing to revenue, education, and community</li>
+</ol>
+<h3>What the Land Provides</h3>
+<ul>
+<li><strong>Land:</strong> Access to terraced growing areas, open land, and natural spaces</li>
+<li><strong>Infrastructure:</strong> Off-grid solar power, borehole water, workshop, tools, and equipment</li>
+<li><strong>Accommodation:</strong> On-site housing for project residents</li>
+<li><strong>Community:</strong> A network of farmers, volunteers, educators, and supporters</li>
+<li><strong>Training:</strong> Ongoing training in syntropic farming, biodynamic practices, and natural building</li>
+</ul>
+<h3>Project Types</h3>
+<h4>Adventure Camps & Outdoor Education</h4>
+<p>Integrated with schools — adventure camps that combine outdoor skills, farming, nature connection, and personal development. Schools can book residential programmes where students learn through authentic farm work, camping, and exploration.</p>
+<h4>Dads & Lads / Mentorship Programmes</h4>
+<p>Structured programmes where fathers and sons (or mentors and youth) work together on the land — building, farming, cooking, and connecting. These programmes strengthen relationships while contributing to the farm's development.</p>
+<h4>Research & Innovation</h4>
+<p>Researchers and innovators can use the land as a living laboratory — testing new methods in syntropic agriculture, aquaponics, natural building, or renewable energy. Findings are shared with the broader community.</p>
+<h4>Arts & Cultural Projects</h4>
+<p>Artists, musicians, and craftspeople can develop land-based creative projects — from natural building and sculpture to music and performance. The farm's festivals provide platforms for showcasing work.</p>
+<h4>Community & Social Enterprise</h4>
+<p>Social entrepreneurs can launch enterprises that serve the community — from natural food processing and herbal products to education and training programmes.</p>
+<h3>Funding & Staff Support</h3>
+<table>
+<thead><tr><th>Support</th><th>What It Covers</th></tr></thead>
+<tbody>
+<tr><td>Project budget</td><td>Materials, equipment, and resources for approved projects</td></tr>
+<tr><td>Staff assistance</td><td>Access to farm staff for labour, expertise, and guidance</td></tr>
+<tr><td>Training</td><td>Syntropic farming, biodynamic practices, natural building, aquaponics</td></tr>
+<tr><td>Marketing</td><td>Promotion through the farm's PR channels and festival platforms</td></tr>
+<tr><td>Revenue share</td><td>Projects that generate revenue share proceeds with the trust for reinvestment</td></tr>
+</tbody>
+</table>
+<h3>Who Can Apply</h3>
+<ul>
+<li>Educators and schools wanting land-based learning programmes</li>
+<li>Youth workers and mentors running dads & lads or similar programmes</li>
+<li>Researchers in agriculture, ecology, or sustainability</li>
+<li>Artists and craftspeople seeking land-based creative space</li>
+<li>Social entrepreneurs with community-serving enterprise ideas</li>
+<li>Anyone with a vision that aligns with regenerating the land and serving the community</li>
+</ul>
+</div>
+
+<div class="section-full" id="sec-future" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Future Goals — Demeter Certification & Export</h2>
+<h3>Demeter Certification Pathway</h3>
+<p>Demeter is the highest standard for biodynamic agriculture — a regular inspection and review process according to the International Demeter Biodynamic Standard. In South Africa, certification is available through <strong>CERES</strong> (ceres-cert.co.za) and the <strong>Biodynamic Agricultural Association of South Africa (BDAASA)</strong> (bdaasa.org.za).</p>
+<table>
+<thead><tr><th>Phase</th><th>Timeline</th><th>What Happens</th></tr></thead>
+<tbody>
+<tr><td>Preparation</td><td>Years 1-2</td><td>Biodynamic practices implemented: compost preparations, field sprays, cover cropping, closed-loop fertility</td></tr>
+<tr><td>Conversion</td><td>Years 2-3</td><td>Farming to Demeter standards; soil testing and improvement documented; conversion period begins</td></tr>
+<tr><td>Inspection</td><td>Year 3</td><td>CERES inspection against International Demeter Standard; PGS (Participatory Guarantee System) option for smaller farms</td></tr>
+<tr><td>Certification</td><td>Year 3+</td><td>Demeter certification granted; access to premium markets and Demeter-branded products</td></tr>
+</tbody>
+</table>
+<h3>Export Licensing</h3>
+<p>Once Demeter certification is achieved, the farm can pursue <strong>export licensing</strong> for premium biodynamic produce to international markets. South African Demeter-certified farms (such as Reyneke Wines, certified for 23 years, exporting to 43 countries) demonstrate the market opportunity. Export revenue commands significantly higher prices than domestic markets.</p>
+<h3>Market Development</h3>
+<ul>
+<li><strong>Year 1-2:</strong> Local markets (farmers' markets, restaurants, online)</li>
+<li><strong>Year 3:</strong> Regional distribution, premium organic/biodynamic retailers</li>
+<li><strong>Year 4+:</strong> Export licensing for Demeter-certified products to EU and other international markets</li>
+</ul>
+</div>
+
+<div class="section-full" id="sec-bio" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Bio & Background</h2>
+<div class="glass glass-hover" style="padding:28px">
+<p><strong>7 years</strong> devoting all my time to serious, practical permaculture and aquaponics experiments. A <strong>photographic memory</strong> for facts in these fields. In constant dialogue with many <strong>living soil horticultural experts</strong>. IT is my passion.</p>
+<p>I was a <strong>garden teacher's assistant at a Waldorf school in Germany</strong>. I loved visiting the <strong>Demeter farm</strong> next door and seeing their practices. This early exposure to biodynamic farming shaped my entire approach to agriculture.</p>
+<p>For the past <strong>2 years</strong> I have been nurturing my food forest at Gaia Sanctuary. <strong>Great soil</strong> in my <strong>hugel full of mycelium</strong>, a good <strong>canopy</strong>, and <strong>fruit tree and veg herb guilds</strong>.</p>
+<p>I know many <strong>free ways to recycle</strong> to create climate-controlled environments. I love making <strong>greenhouses and tunnels from trash</strong>. Next step: <strong>storm-proofing</strong>.</p>
+</div>
+<h3>Waldorf / Biodynamic Connection</h3>
+<p>The project maintains an active relationship with <strong>Freunde der Erziehungskunst Rudolf Steiners e. V.</strong> (Friends of Waldorf Education), the Stuttgart-based umbrella organisation for Waldorf education worldwide, founded in 1971. Through their volunteer service programmes (<em>Freiwilligendienste</em>), they connect volunteers with Waldorf-inspired agricultural and education projects globally.</p>
+<p>In South Africa, the <strong>Federation of Waldorf Schools</strong> (waldorf.org.za) is the local member organisation. The project draws volunteers through these networks — people interested in biodynamic farming, syntropic agriculture, and Waldorf education who want to contribute practical work in exchange for learning and community.</p>
+<p>The biodynamic tradition runs deep: from the Waldorf school garden where I first learned, to the neighbouring Demeter farm that showed what biodynamic practices achieve, to <strong>Afrikara Biodynamic Farm and Community</strong> at Hoekiesdam Farm near Wolseley — an established socio-agricultural community practising biodynamic permaculture in the Western Cape.</p>
+</div>
+
+<div class="section-full" id="sec-team" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Team</h2>
+<p>Farm manager, 2 teams of 2 biodynamic farmers, 2 volunteers. Busy side hustle: biodynamic training.</p>
+<div class="team-grid">
+<div class="glass glass-hover team-card"><div class="avatar">&#x1F33E;</div><h4>Farm Manager</h4><div class="role">Operations Lead</div><p>Day-to-day operations, syntropic design, volunteers.</p></div>
+<div class="glass glass-hover team-card"><div class="avatar">&#x1F331;</div><h4>Biodynamic Team A</h4><div class="role">2 Farmers</div><p>Syntropic systems, biodynamic preparations, compost.</p></div>
+<div class="glass glass-hover team-card"><div class="avatar">&#x1F331;</div><h4>Biodynamic Team B</h4><div class="role">2 Farmers</div><p>Aquaponics, livestock, water systems, infrastructure.</p></div>
+<div class="glass glass-hover team-card"><div class="avatar">&#x1F91D;</div><h4>Volunteers</h4><div class="role">2 Positions</div><p>Hands-on learning, maintenance, nursery, hospitality.</p></div>
+</div>
+<div class="glass glass-hover" style="padding:20px;margin-top:16px"><h3>Biodynamic Training Program</h3><p>One of our busiest side hustles. Workshops, internships, and a structured curriculum.</p></div>
+</div>
+
+<div class="section-full" id="sec-improv" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Improvisation & Innovation</h2>
+<div class="glass glass-hover improv-card"><span class="tag">Recycled Greenhouses</span><span class="tag">Low-Cost</span><h3>Climate-Controlled Environments from Trash</h3><p>Free ways to recycle materials for climate-controlled growing environments. Plastic bottles, old windows, scrap wood become productive growing spaces.</p></div>
+<div class="glass glass-hover improv-card"><span class="tag">Storm-Proofing</span><span class="tag">Next Step</span><h3>Making Them Storm-Proof</h3><p>Reinforcing recycled greenhouses to withstand Western Cape wind, rain, and hail.</p></div>
+<div class="glass glass-hover improv-card"><span class="tag">Hugelkultur</span><span class="tag">Mycelium</span><h3>Mycelium-Rich Hugel Beds</h3><p>Two years at Gaia produced great soil in hugel beds full of mycelium. The fungal network is the foundation of everything we grow.</p></div>
+<div class="glass glass-hover improv-card"><span class="tag">Waldorf / Demeter</span><h3>From Waldorf to Demeter</h3><p>Garden teacher's assistant at a Waldorf school. The Demeter farm next door showed what biodynamic practices achieve.</p></div>
+</div>
+
+<div class="section-full" id="sec-hr" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Human Resources Plan</h2>
+<h3>Recruitment</h3>
+<ul>
+<li><strong>Farm Manager:</strong> Recruited from experienced regenerative agriculture practitioners. Must have syntropic/biodynamic knowledge and leadership skills.</li>
+<li><strong>Biodynamic Farmers (4):</strong> Recruited through Freunde der Erziehungskunst Rudolf Steiners volunteer networks, Federation of Waldorf Schools, and agricultural colleges. Training provided on-site.</li>
+<li><strong>Volunteers (2+):</strong> Recruited through Freunde der Erziehungskunst Freiwilligendienste, WWOOF, and local volunteer organisations. 3-6 month placements.</li>
+<li><strong>Seasonal workers:</strong> Local community members for planting, harvesting, and event support.</li>
+</ul>
+<h3>Training & Development</h3>
+<ul>
+<li><strong>Onboarding:</strong> 2-week orientation covering syntropic principles, biodynamic preparations, aquaponics systems, and safety</li>
+<li><strong>Ongoing:</strong> Weekly knowledge-sharing sessions; annual training budget per team member</li>
+<li><strong>External:</strong> Team members attend biodynamic conferences, syntropic workshops, and certification courses</li>
+</ul>
+<h3>Volunteer Programme</h3>
+<ul>
+<li>Volunteers receive training, accommodation, and meals in exchange for 4-6 hours of daily farm work</li>
+<li>Structured programme: Week 1 orientation, Weeks 2-8 rotational placements (nursery, gardens, aquaponics, construction)</li>
+<li>Maximum 6 volunteers at any time to ensure quality supervision</li>
+</ul>
+<h3>Worker Welfare</h3>
+<ul>
+<li>Fair wages aligned with South African agricultural standards</li>
+<li>Sales kickback bonus scheme — all team members share in revenue</li>
+<li>Accommodation available on-site for full-time staff</li>
+<li>Healthy meals provided from farm produce</li>
+</ul>
+</div>
+
+<div class="section-full" id="sec-pr" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>PR & Communications Plan</h2>
+<h3>Brand Identity</h3>
+<p>Tesselaars Dal Land Regeneration Project is positioned as a <strong>regenerative agriculture hub</strong> — a place where food is grown in harmony with nature, where the land is healed, and where people come to learn, celebrate, and connect. The brand is rooted in biodynamic and Waldorf traditions, appealing to conscious consumers, festival-goers, and the sustainability community.</p>
+<h3>Key Messages</h3>
+<ul>
+<li><strong>Healing the land:</strong> Every purchase supports the regeneration of degraded farmland</li>
+<li><strong>Community:</strong> A network of stewards, volunteers, and supporters growing together</li>
+<li><strong>Education:</strong> Teaching syntropic and biodynamic farming to the next generation</li>
+<li><strong>Abundance:</strong> From degraded soil to abundant harvests — proof that agriculture can restore</li>
+</ul>
+<h3>Channels</h3>
+<table>
+<thead><tr><th>Channel</th><th>Audience</th><th>Content</th><th>Frequency</th></tr></thead>
+<tbody>
+<tr><td>Instagram / TikTok</td><td>18-35, festival-goers, sustainability community</td><td>Farm life, harvests, behind-the-scenes, educational reels</td><td>3-4x/week</td></tr>
+<tr><td>Facebook</td><td>35-65, local community, families</td><td>Events, open days, produce availability, volunteer recruitment</td><td>2x/week</td></tr>
+<tr><td>Email newsletter</td><td>Supporters, donors, partners</td><td>Monthly updates, harvest reports, event invitations</td><td>Monthly</td></tr>
+<tr><td>Blog / Website</td><td>Researchers, media, potential partners</td><td>In-depth articles on syntropic methods, progress reports</td><td>2x/month</td></tr>
+<tr><td>Podcast / YouTube</td><td>Deep-dive audience</td><td>Long-form interviews, farm tours, educational series</td><td>Monthly</td></tr>
+</tbody>
+</table>
+<h3>Media Relations</h3>
+<ul>
+<li><strong>Press releases:</strong> Property acquisition, first harvest, Demeter certification milestone, festival launches</li>
+<li><strong>Media visits:</strong> Invite journalists, bloggers, and influencers for farm tours and harvest experiences</li>
+<li><strong>Storytelling:</strong> The narrative — degraded land to abundant farm — is inherently compelling. Pitch to sustainability, food, and agriculture media</li>
+</ul>
+<h3>Partnerships & Cross-Promotion</h3>
+<ul>
+<li>Afrikara Biodynamic Farm — cross-promotion, shared marketing, joint events</li>
+<li>Federation of Waldorf Schools — access to parent community, school partnerships</li>
+<li>Overberg tourism operators — farm-to-table restaurant partnerships, eco-tourism packages</li>
+<li>Local farmers' markets — stall presence, brand visibility</li>
+</ul>
+</div>
+
+<div class="section-full" id="sec-operations" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Operational Plan — Events & Festivals</h2>
+<h3>Open Days</h3>
+<p><strong>Frequency:</strong> Monthly, on the first Saturday. Free entry.</p>
+<p><strong>Activities:</strong> Farm tours, harvest demonstrations, seedling sales, workshops on composting and biodynamic preparations, farm-to-table lunch, volunteer information sessions.</p>
+<p><strong>Purpose:</strong> Community engagement, education, recruitment, direct sales.</p>
+<h3>Four Festivals Per Year</h3>
+<table>
+<thead><tr><th>Festival</th><th>Season</th><th>Theme</th><th>Timing</th></tr></thead>
+<tbody>
+<tr><td><strong>Spring Equinox Festival</strong></td><td>September</td><td>Planting & renewal</td><td>Week of 21 Sept</td></tr>
+<tr><td><strong>Summer Harvest Festival</strong></td><td>December</td><td>First fruits & abundance</td><td>Early December</td></tr>
+<tr><td><strong>Autumn Equinox Festival</strong></td><td>March</td><td>Harvest & preservation</td><td>Week of 21 March</td></tr>
+<tr><td><strong>Winter Solstice Festival</strong></td><td>June</td><td>Rest, planning & community</td><td>Week of 21 June</td></tr>
+</tbody>
+</table>
+<h3>Festival Model</h3>
+<p>Each festival runs for 2-3 days and combines:</p>
+<ul>
+<li><strong>Live music</strong> — local and invited artists, acoustic and electronic</li>
+<li><strong>Workshops</strong> — biodynamic farming, composting, food preservation, natural building</li>
+<li><strong>Farm-to-table food</strong> — all food served at the festival is grown on the farm</li>
+<li><strong>Market</strong> — seedlings, produce, value-added products, crafts</li>
+<li><strong>Community</strong> — volunteers, stewards, supporters, and visitors co-create the event</li>
+</ul>
+<h3>The OZORA Vision</h3>
+<p>The long-term vision is for Tesselaars Dal Land Regeneration Project to become a <strong>transformational festival destination</strong> — inspired by <strong>OZORA Festival</strong> in Hungary, an 11-day transformational festival with 30,000 people known for its community kitchens, organic food, and collective living experiment.</p>
+<p>At Tesselaars Dal, festival-goers would receive <strong>free food made from the farm's harvests</strong> — not as charity, but as an expression of the farm's abundance and the community's ethos. The farm grows food; the festival is the celebration of that food. The land is rejuvenated, and the bounty is shared.</p>
+<ul>
+<li><strong>Community kitchen:</strong> Like OZORA's community kitchen, a shared space where festival-goers and volunteers prepare meals together from farm produce</li>
+<li><strong>Free harvest meals:</strong> During peak harvest season, free meals made from farm produce are offered to all festival attendees</li>
+<li><strong>Volunteer-powered:</strong> Festival operations are run by volunteers who receive free entry, meals, and accommodation in exchange for their contribution</li>
+<li><strong>Sustainability:</strong> Zero-waste events, composting, recycling, and leave-no-trace principles</li>
+<li><strong>Education:</strong> Workshops and talks throughout the festival on regenerative agriculture, biodiversity, and sustainable living</li>
+</ul>
+<h3>Revenue from Events</h3>
+<table>
+<thead><tr><th>Revenue Stream</th><th>Festival</th><th>Open Day</th></tr></thead>
+<tbody>
+<tr><td>Ticket sales</td><td>R 40,000 – R 80,000</td><td>Free entry</td></tr>
+<tr><td>Market stall sales</td><td>R 15,000 – R 30,000</td><td>R 5,000 – R 10,000</td></tr>
+<tr><td>Workshop fees</td><td>R 10,000 – R 20,000</td><td>R 2,000 – R 5,000</td></tr>
+<tr><td>Food & drink</td><td>R 20,000 – R 40,000</td><td>R 3,000 – R 8,000</td></tr>
+<tr><td>Donations</td><td>R 5,000 – R 15,000</td><td>R 1,000 – R 3,000</td></tr>
+<tr><td><strong>Total per event</strong></td><td><strong>R 90,000 – R 185,000</strong></td><td><strong>R 11,000 – R 26,000</strong></td></tr>
+</tbody>
+</table>
+<p>4 festivals per year: <strong>R 360,000 – R 740,000/year</strong> in event revenue. Monthly open days: <strong>R 132,000 – R 312,000/year</strong>. Combined: <strong>R 492,000 – R 1,052,000/year</strong>.</p>
+</div>
+
+<div class="section-full" id="sec-financials" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Financial Plan — Donation Model</h2>
+<p>The Tesselaars Dal Land Regeneration Project is structured as a <strong>donation-funded initiative</strong> through a registered Public Benefit Organisation (PBO). All donations are <strong>tax-deductible under Section 18A</strong> of the South African Income Tax Act. Donors receive official Section 18A tax receipts from SARS.</p>
+<h3>How Tax-Deductible Donations Work</h3>
+<ul>
+<li>Donors contribute to the project through the PBO</li>
+<li>The PBO issues a <strong>Section 18A tax receipt</strong> for each donation</li>
+<li>Donors can deduct the donation from their taxable income, up to <strong>10% of taxable income</strong> per year (with carry-forward for excess)</li>
+<li>Example: A donor with R 500,000 taxable income can deduct up to R 50,000 in donations, reducing their tax liability by up to R 18,000 (at 36% marginal rate)</li>
+</ul>
+<h3>Funding Requirements</h3>
+<table>
+<thead><tr><th>Item</th><th>Amount</th><th>Funding Source</th></tr></thead>
+<tbody>
+<tr><td>Property acquisition (4.3 ha, off-grid)</td><td>R 4,000,000</td><td>Donations + bond revenue</td></tr>
+<tr><td>Phase 1 setup (water filter, wattle clearing, aquaponics, greenhouse)</td><td>R 4,000,000</td><td>Donations + bond revenue</td></tr>
+<tr><td>Phase 2 expansion (syntropic systems, shade houses, livestock)</td><td>R 1,500,000 – R 2,500,000</td><td>Donations + revenue reinvestment</td></tr>
+<tr><td>Phase 3 maturity (certification, education buildout)</td><td>R 500,000 – R 1,000,000</td><td>Revenue reinvestment</td></tr>
+<tr><td><strong>Total Funding Required</strong></td><td><strong>R 10,000,000 – R 11,500,000</strong></td><td><strong>Mix of donations and earned revenue</strong></td></tr>
+</tbody>
+</table>
+<h3>Operating Costs (Annual, at Maturity — Year 3)</h3>
+<table>
+<thead><tr><th>Cost Category</th><th>Estimated Annual</th></tr></thead>
+<tbody>
+<tr><td>Staff (2-3 full-time)</td><td>R 240,000 – R 360,000</td></tr>
+<tr><td>Maintenance & repairs</td><td>R 50,000 – R 80,000</td></tr>
+<tr><td>Feed, seedlings, consumables</td><td>R 60,000 – R 120,000</td></tr>
+<tr><td>Insurance & rates</td><td>R 30,000 – R 50,000</td></tr>
+<tr><td>Education & marketing</td><td>R 40,000 – R 80,000</td></tr>
+<tr><td><strong>Total Operating Costs</strong></td><td><strong>R 420,000 – R 690,000</strong></td></tr>
+</tbody>
+</table>
+<h3>Break-Even Analysis</h3>
+<p>At target revenue (R 1,342,500 – R 2,107,500) vs. operating costs (R 420,000 – R 690,000), the project breaks even by <strong>Year 3</strong> and generates <strong>R 652,500 – R 1,687,500 annual surplus</strong> for reinvestment.</p>
+<h3>Impact Projections</h3>
+<ul>
+<li><strong>Land restored:</strong> 4.3 ha of degraded farmland returned to productive ecosystem</li>
+<li><strong>Water saved:</strong> 15-30% increase in catchment water yield through wattle clearing</li>
+<li><strong>Carbon sequestered:</strong> 21-64 tCO₂e/year by Year 5</li>
+<li><strong>People trained:</strong> 50+ farmers and volunteers per year</li>
+<li><strong>Meals shared:</strong> Free harvest meals at 4 festivals per year</li>
+<li><strong>Biodiversity:</strong> 100+ plant species established on degraded land</li>
+</ul>
+</div>
+
+<div class="section-full" id="sec-risks" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Risk & Mitigation</h2>
+<table>
+<thead><tr><th>Risk</th><th>Level</th><th>Mitigation</th></tr></thead>
+<tbody>
+<tr><td>Water quality (ferrous iron)</td><td>Medium</td><td>Reed bed + filtration system installed in Phase 1</td></tr>
+<tr><td>Climate variability (drought, frost)</td><td>Medium</td><td>Climate-controlled areas, diversified species, dam storage</td></tr>
+<tr><td>Carbon credit verification delays</td><td>Medium</td><td>Register early; use established Verra VCS methodologies</td></tr>
+<tr><td>Wattle regrowth</td><td>Medium</td><td>Follow-up clearing schedule; bond-funded maintenance</td></tr>
+<tr><td>Market access for produce</td><td>Low</td><td>Existing Overberg market network; online channels</td></tr>
+<tr><td>Regulatory changes</td><td>Low</td><td>Engage TNC SA and local authorities early; stay compliant</td></tr>
+<tr><td>Capital cost overruns</td><td>Medium</td><td>10% contingency buffer; phased approach limits exposure</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="section-full" id="sec-ask" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>How to Support the Project</h2>
+<p>The Tesselaars Dal Land Regeneration Project is funded through <strong>tax-deductible donations</strong> via a registered Public Benefit Organisation (PBO) with Section 18A status. Every donation receives an official SARS Section 18A tax receipt.</p>
+<h3>Donation Tiers</h3>
+<table>
+<thead><tr><th>Tier</th><th>Amount</th><th>What You Get</th></tr></thead>
+<tbody>
+<tr><td>Seed</td><td>R 500 – R 50,000</td><td>Section 18A tax receipt, quarterly email updates, farm visit invitation</td></tr>
+<tr><td>Growth</td><td>R 50,000 – R 250,000</td><td>Tax receipt, quarterly updates, farm visits, name on donor wall</td></tr>
+<tr><td>Anchor</td><td>R 250,000+</td><td>Tax receipt, quarterly updates, farm visits, name on donor wall, annual report</td></tr>
+</tbody>
+</table>
+<h3>What Your Donation Supports</h3>
+<ul>
+<li>Regeneration of 4.3 ha of degraded farmland</li>
+<li>Water security for Cape Town's 4.8 million residents</li>
+<li>Training 50+ farmers and volunteers per year</li>
+<li>Free harvest meals for festival-goers at 4 annual festivals</li>
+<li>Carbon sequestration and biodiversity restoration</li>
+</ul>
+<h3>Tax Benefits</h3>
+<p>Donors can deduct contributions from taxable income, up to <strong>10% of taxable income</strong> per year (with carry-forward for excess). At the 36% marginal tax rate, a R 100,000 donation effectively costs R 64,000 after tax savings.</p>
+<div class="cta-section">
+<h2>Ready to Regenerate the Land?</h2>
+<p>Your tax-deductible donation directly funds the restoration of degraded farmland, water security, and community education.</p>
+<a href="#sec-donate" class="cta-btn" onclick="showSection('donate')">Donate Now</a>
+</div>
+</div>
+
+<div class="section-full" id="sec-donate" style="display:none">
+<button class="back-btn" onclick="showMain()">&larr; Back to Chapters</button>
+<h2>Make a Tax-Deductible Donation</h2>
+<p>Your donation funds property acquisition, land restoration, staff wages, greenhouse construction, and farmer training. All donations are tax-deductible under Section 18A — you'll receive an official SARS tax receipt.</p>
+<div class="donate-amounts">
+<button class="donate-btn" onclick="selectAmount(500,this)">R 500</button>
+<button class="donate-btn" onclick="selectAmount(1000,this)">R 1,000</button>
+<button class="donate-btn" onclick="selectAmount(5000,this)">R 5,000</button>
+<button class="donate-btn" onclick="selectAmount(10000,this)">R 10,000</button>
+</div>
+<input type="number" class="donate-custom" id="customAmount" placeholder="Custom amount (R)" min="1">
+<button class="donate-submit" onclick="processDonation()">Donate Now</button>
+<div class="donate-progress"><div class="bar"><div class="fill" id="donateFill"></div></div><div class="info"><span id="donateRaised">R 0</span> raised of R 10,000,000 goal (tax-deductible)</div></div>
+<div class="donate-thanks" id="donateThanks">Thank you for your generous tax-deductible donation!</div>
+</div>
+
+<footer class="footer"><p>Tesselaars Dal Land Regeneration Project — A Section 18A Registered PBO</p><p>Portion 163 of Farm 811, Tesselaarsdal, Caledon, Western Cape</p></footer>
+
+<script>
+var THEME_ORDER=['forest','ocean','violet','gold','rose','indigo','classic'];
+var THEMES={forest:{accent:'#34d399',bg:'#060a14',text:'#f2f0f8',card:'#10131f',border:'#1f4a3a'},ocean:{accent:'#60a5fa',bg:'#0a1420',text:'#f2f0f8',card:'#0a1420',border:'#1e3a5f'},violet:{accent:'#a78bfa',bg:'#120e22',text:'#f2f0f8',card:'#120e22',border:'#3b3563'},gold:{accent:'#f59e0b',bg:'#1a1206',text:'#f2f0f8',card:'#1a1206',border:'#4a3a1e'},rose:{accent:'#fb7185',bg:'#1a0e12',text:'#f2f0f8',card:'#1a0e12',border:'#4a2e35'},indigo:{accent:'#818cf8',bg:'#0f0f23',text:'#f2f0f8',card:'#0f0f23',border:'#2e2e5e'},classic:{accent:'#fbbf24',bg:'#060a14',text:'#f2f0f8',card:'#10131f',border:'#3d3a2e'}};
+var themeIdx=0;
+document.getElementById('themeCycleBtn').addEventListener('click',function(){themeIdx=(themeIdx+1)%THEME_ORDER.length;var t=THEMES[THEME_ORDER[themeIdx]];var root=document.documentElement.style;root.setProperty('--cs-accent',t.accent);root.setProperty('--cs-bg',t.bg);root.setProperty('--cs-text',t.text);root.setProperty('--cs-bg-card',t.card);root.setProperty('--cs-border',t.border)});
+function showMain(){document.querySelectorAll('.section-full').forEach(function(s){s.style.display='none'});document.getElementById('mainView').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
+function showSection(id){document.getElementById('mainView').style.display='none';document.querySelectorAll('.section-full').forEach(function(s){s.style.display='none'});var el=document.getElementById('sec-'+id);if(el){el.style.display='block';window.scrollTo({top:0,behavior:'smooth'})}}
+var selectedAmt=0;
+function selectAmount(amt,btn){selectedAmt=amt;document.querySelectorAll('.donate-btn').forEach(function(b){b.classList.remove('selected')});if(btn)btn.classList.add('selected');document.getElementById('customAmount').value=''}
+function processDonation(){var custom=parseInt(document.getElementById('customAmount').value);var amt=custom>0?custom:selectedAmt;if(amt>0){document.getElementById('donateThanks').style.display='block';var current=parseInt(document.getElementById('donateRaised').textContent.replace(/[^0-9]/g,''))||0;var newTotal=current+amt;document.getElementById('donateRaised').textContent='R '+newTotal.toLocaleString();var pct=Math.min(100,(newTotal/10000000)*100);document.getElementById('donateFill').style.width=pct+'%'}}
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js').catch(err=>console.warn('SW registration failed:',err))})}
+</script>
+</body>
+</html>

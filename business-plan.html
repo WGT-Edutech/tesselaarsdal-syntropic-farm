@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0f0d">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Tesselaarsdal Syntropic Farm — Business Plan</title>
+<style>
+  :root {
+    --bg-deep: #0a0f0d;
+    --bg-card: rgba(255,255,255,0.04);
+    --bg-card-hover: rgba(255,255,255,0.07);
+    --accent: #2dd4bf;
+    --accent-dim: rgba(45,212,191,0.15);
+    --accent-glow: rgba(45,212,191,0.25);
+    --text: #e8e8e8;
+    --text-muted: #9ca3af;
+    --text-dim: #6b7280;
+    --border: rgba(255,255,255,0.08);
+    --green: #34d399;
+    --amber: #fbbf24;
+    --blue: #60a5fa;
+    --red: #f87171;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --max-w: 960px;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    background: var(--bg-deep);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Animated background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 20%, rgba(45,212,191,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 70%, rgba(52,211,153,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 50% 50%, rgba(96,165,250,0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  header {
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  .project-name {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 32px;
+  }
+  .badge-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .badge-green { background: rgba(52,211,153,0.12); color: var(--green); border: 1px solid rgba(52,211,153,0.2); }
+  .badge-blue { background: rgba(96,165,250,0.12); color: var(--blue); border: 1px solid rgba(96,165,250,0.2); }
+  .badge-amber { background: rgba(251,191,36,0.12); color: var(--amber); border: 1px solid rgba(251,191,36,0.2); }
+
+  /* Navigation */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(10,15,13,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 14px 0;
+  }
+  nav .container {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+  nav a:hover, nav a.active {
+    color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  /* Sections */
+  section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+  }
+  p { margin-bottom: 16px; color: var(--text-muted); }
+  p strong, li strong { color: var(--text); }
+  ul, ol { margin: 0 0 16px 24px; color: var(--text-muted); }
+  li { margin-bottom: 8px; }
+
+  /* Cards */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+  }
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(45,212,191,0.15);
+  }
+  .card-accent { border-left: 3px solid var(--accent); }
+  .card-green { border-left: 3px solid var(--green); }
+  .card-amber { border-left: 3px solid var(--amber); }
+  .card-blue { border-left: 3px solid var(--blue); }
+
+  /* Grid */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+
+  /* Stat */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .stat {
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+  th {
+    text-align: left;
+    padding: 12px 14px;
+    font-weight: 600;
+    color: var(--text);
+    border-bottom: 2px solid var(--border);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+  td:first-child { color: var(--text); font-weight: 500; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+
+  /* Financial highlight */
+  .fin-highlight {
+    background: linear-gradient(135deg, rgba(45,212,191,0.08), rgba(52,211,153,0.05));
+    border: 1px solid rgba(45,212,191,0.15);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin: 20px 0;
+  }
+  .fin-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .fin-row:last-child { border-bottom: none; }
+  .fin-label { color: var(--text-muted); }
+  .fin-value { font-weight: 700; font-family: var(--font-mono); color: var(--accent); }
+  .fin-value.green { color: var(--green); }
+  .fin-value.amber { color: var(--amber); }
+
+  /* Phase timeline */
+  .phase {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 28px;
+  }
+  .phase::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: -28px;
+    width: 2px;
+    background: var(--border);
+  }
+  .phase:last-child::before { display: none; }
+  .phase::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent-glow);
+  }
+  .phase-title { font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .phase-desc { font-size: 0.9rem; color: var(--text-muted); }
+  .phase-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* Callout */
+  .callout {
+    background: rgba(45,212,191,0.06);
+    border: 1px solid rgba(45,212,191,0.15);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .callout strong { color: var(--accent); }
+
+  /* Risk */
+  .risk-low { color: var(--green); }
+  .risk-med { color: var(--amber); }
+  .risk-high { color: var(--red); }
+
+  /* Footer */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    section { padding: 40px 0; }
+    header { padding: 50px 0 40px; }
+    .card { padding: 20px; }
+    nav .container { gap: 2px; }
+    nav a { font-size: 0.75rem; padding: 4px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="project-name">Tesselaarsdal Syntropic Farm</div>
+    <p class="tagline">Growing water, soil, and food security through syntropic farming in the Western Cape</p>
+    <div class="badge-row">
+      <span class="badge badge-green">4.3 ha</span>
+      <span class="badge badge-blue">Off-Grid</span>
+      <span class="badge badge-amber">R 4,000,000</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <a href="#overview">Overview</a>
+    <a href="#property">Property</a>
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#revenue">Revenue</a>
+    <a href="#operations">Operations</a>
+    <a href="#financials">Financials</a>
+    <a href="#verification">Verification</a>
+    <a href="#trust">Trust</a>
+    <a href="#impact">Impact</a>
+    <a href="#team">Team</a>
+    <a href="#risks">Risks</a>
+    <a href="#ask">The Ask</a>
+  </div>
+</nav>
+
+<section id="overview">
+  <div class="container">
+    <div class="section-label">Executive Summary</div>
+    <h2>A Self-Sustaining Ecosystem That Pays for Itself</h2>
+    <p>Tesselaarsdal Syntropic Farm is the <strong>pilot project</strong> of a <strong>Land Stewardship Trust</strong> — a portfolio of regenerative agriculture projects across the Western Cape. The trust approves and supports land stewards who pitch projects to revitalise and nurture degraded land. This 4.3-hectare property in the Overberg combines <strong>black wattle clearing</strong> (in partnership with the FirstRand/RMB ecological restoration bond), <strong>syntropic agroforestry</strong>, <strong>aquaponics</strong>, and <strong>education</strong> to create a self-sustaining ecosystem that generates revenue while restoring the land.</p>
+    <p>The property at Portion 163 of Farm 811, Tesselaarsdal, comes with a <strong>R 4,000,000</strong> price tag and existing infrastructure: a 3-bedroom off-grid home with 30kW solar, a borehole producing 3,600 litres/hour, a million-litre dam, a 1-bedroom cottage, a workshop, and 1,600 m² of terraced growing land already under organic management.</p>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-value">R2.5bn</div>
+        <div class="stat-label">FirstRand/RMB Bond</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">4.3 ha</div>
+        <div class="stat-label">Land Area</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">3,600 L/h</div>
+        <div class="stat-label">Borehole Yield</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">30 kW</div>
+        <div class="stat-label">Solar Capacity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="property">
+  <div class="container">
+    <div class="section-label">The Property</div>
+    <h2>Portion 163 of Farm 811, Tesselaarsdal</h2>
+    <p>Located 24 minutes from Caledon and 50 minutes from Hermanus, this property has been organically farmed for 13 years. The current owners have hand-dug terraces, built healthy living soil, and established productive food gardens — the ideal foundation for a syntropic system.</p>
+
+    <div class="grid-2">
+      <div class="card card-green">
+        <h3>Existing Infrastructure</h3>
+        <ul>
+          <li><strong>3-bedroom house</strong> (2 bedrooms + study), 2 bathrooms</li>
+          <li><strong>30 kW 3-phase solar</strong> — fully off-grid, Eskom disconnected</li>
+          <li><strong>Borehole:</strong> 3,600 litres/hour (ferrous iron — needs reed bed filter)</li>
+          <li><strong>Million-litre dam</strong> with mountain views</li>
+          <li><strong>1-bedroom wooden cottage</strong> — rental income potential</li>
+          <li><strong>Wooden workshop</strong> — tools and storage</li>
+          <li><strong>Braai room</strong> and open-plan kitchen/lounge</li>
+        </ul>
+      </div>
+      <div class="card card-blue">
+        <h3>Growing Assets</h3>
+        <ul>
+          <li><strong>1,600 m² terraced growing area</strong> under irrigation</li>
+          <li><strong>Rich clay soil</strong> — mineral-dense, organically managed 13 years</li>
+          <li><strong>Productive fruit trees</strong> and food gardens</li>
+          <li><strong>Current crops:</strong> garlic, onions, potatoes</li>
+          <li><strong>Yellowwood forest</strong> planted on neighbour's border</li>
+          <li><strong>Permaculture principles</strong> already applied — zero pesticides</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Key insight:</strong> The property already has water security (borehole + dam), energy independence (solar), and productive soil. The project builds on these assets rather than starting from scratch.
+    </div>
+  </div>
+</section>
+
+<section id="problem">
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2>Black Wattle Is Stealing Our Water</h2>
+    <p>South Africa is the <strong>31st driest country</strong> in the world. Invasive alien plants — primarily black wattle (<em>Acacia mearnsii</em>) — cover vast swathes of Western Cape catchment areas, consuming massive volumes of water that would otherwise feed dams and aquifers.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>The Scale</h3>
+        <p>Black wattle is one of the most widespread invasive alien trees in South Africa. Clearing mature infestations increases available water resources by <strong>15–29.5%</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>The Cost</h3>
+        <p>Invasive species have overrun priority water catchment regions. Their removal is critical to improve dam inflows for Cape Town's 4.8 million residents.</p>
+      </div>
+    </div>
+    <p>At the same time, conventional agriculture degrades soil, depends on expensive inputs, and is increasingly vulnerable to climate shocks. Small-scale farmers lack access to proven regenerative methods and the capital to transition.</p>
+  </div>
+</section>
+
+<section id="solution">
+  <div class="container">
+    <div class="section-label">The Solution</div>
+    <h2>Syntropic Farming: Agriculture That Heals</h2>
+    <p>Syntropic farming, developed by Ernst Götsch, is the most intensive form of agroforestry. It choreographs plant succession through time — mimicking how a forest naturally regenerates — to produce food while restoring soil, water cycles, and biodiversity.</p>
+
+    <div class="grid-3">
+      <div class="card card-accent">
+        <h3>Wattle Clearing</h3>
+        <p>Remove invasive black wattle from the property and surrounding catchment. Revenue from the FirstRand/RMB bond funds the clearing and provides long-term ecosystem service income.</p>
+      </div>
+      <div class="card card-green">
+        <h3>Syntropic Systems</h3>
+        <p>Establish stratified agroforestry rows combining fruit trees, timber, vegetables, and support species. The 1,600 m² terraced area expands into a full syntropic food forest.</p>
+      </div>
+      <div class="card card-blue">
+        <h3>Aquaponics</h3>
+        <p>Build landscaped aquaponics ponds combining fish, plants, and water features. Symbiotic polyculture with poultry and small livestock integrated into the system.</p>
+      </div>
+      <div class="card card-amber">
+        <h3>Climate-Controlled Areas</h3>
+        <p>Greenhouses and shade houses for rare plant propagation, seedling nurseries, and season extension. Enables year-round production and biodiversity conservation.</p>
+      </div>
+      <div class="card card-accent">
+        <h3>Biodynamic 100%</h3>
+        <p>Full biodynamic certification pathway. Closed-loop fertility: compost, worm farms, biochar, and on-farm inputs only. Zero external fertilisers or pesticides.</p>
+      </div>
+      <div class="card card-green">
+        <h3>Education & Training</h3>
+        <p>Teach people how to grow, harvest, and secure their future. Workshops, internships, and a training curriculum for aspiring syntropic farmers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="revenue">
+  <div class="container">
+    <div class="section-label">Revenue Streams</div>
+    <h2>Multiple Income Streams, One Integrated System</h2>
+    <p>The project is designed for financial sustainability from year 1, with revenue growing as systems mature.</p>
+
+    <div class="card card-green">
+      <h3>1. Ecological Restoration Bond (Primary — Years 1–3)</h3>
+      <p>The <strong>FirstRand/RMB R2.5 billion Cape Water Performance-based Bond</strong> (launched April 2026) rewards investors based on measured improvements in Cape Town water catchments through invasive vegetation removal. The bond supports The Nature Conservancy (TNC) South Africa.</p>
+      <p><strong>Our role:</strong> As a catchment-area project, we qualify for bond-funded wattle clearing operations. This provides immediate revenue for land restoration while improving water yields — the bond's core metric.</p>
+      <p><strong>Estimated annual revenue:</strong> R 300,000–R 600,000 (based on cleared hectares and verified water impact)</p>
+    </div>
+
+    <div class="card card-blue">
+      <h3>2. Carbon Credits (Years 2–5)</h3>
+      <p>Regenerative agriculture and agroforestry sequester significant carbon. South African carbon programs (Verra VCS VM0042/VM0047) offer <strong>R 142–R 500 per tonne CO₂e</strong>.</p>
+      <p><strong>Pathway:</strong> Register with a South African carbon program. Syntropic systems sequester 5–15 tCO₂e/ha/year at maturity. On 4.3 ha: <strong>R 3,000–R 32,000/year</strong> initially, growing as systems establish.</p>
+    </div>
+
+    <div class="card card-accent">
+      <h3>3. Produce Sales (Years 1–5)</h3>
+      <p>Year 1: Existing gardens (garlic, onions, potatoes) + aquaponics fish (tilapia) + poultry eggs. Year 2+: syntropic fruits, nuts, vegetables, and value-added products (preserves, dried herbs).</p>
+      <p><strong>Markets:</strong> Overberg farmers' markets, Hermanus/Caledon restaurants, online organic produce boxes.</p>
+      <p><strong>Estimated annual revenue:</strong> R 150,000–R 400,000 by year 3</p>
+    </div>
+
+    <div class="card card-amber">
+      <h3>4. Eco-Tourism & Accommodation (Years 1–5)</h3>
+      <p>The 1-bedroom cottage and main house guest rooms offer farm-stay experiences. The picturesque setting — mountain views, landscaped aquaponics, mature food forest — is a destination in itself.</p>
+      <p><strong>Estimated annual revenue:</strong> R 80,000–R 200,000</p>
+    </div>
+
+    <div class="card card-green">
+      <h3>5. Education & Training (Years 2–5)</h3>
+      <p>Workshops, internships, and a structured training curriculum. The project becomes a study site for biodynamic syntropic farming — the first of its kind in the Western Cape at this scale.</p>
+      <p><strong>Estimated annual revenue:</strong> R 100,000–R 300,000 (workshop fees, internships, consulting)</p>
+    </div>
+  </div>
+</section>
+
+<section id="operations">
+  <div class="container">
+    <div class="section-label">Operations</div>
+    <h2>Phased Implementation</h2>
+
+    <div class="phase">
+      <div class="phase-title">Phase 1: Foundation (Months 1–6) <span class="phase-tag">R 4,000,000</span></div>
+      <div class="phase-desc">Property acquisition. Install reed bed water filter. Begin wattle clearing on the most degraded areas. Establish compost, worm farm, and biochar production. Plant first syntropic rows in the 1,600 m² terraced area. Build aquaponics system #1. Set up greenhouse.</div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-title">Phase 2: Systems Build (Months 7–18) <span class="phase-tag">R 1,500,000–R 2,500,000</span></div>
+      <div class="phase-desc">Expand syntropic systems across 2+ ha. Build climate-controlled shade houses. Install additional aquaponics ponds. Begin poultry and small livestock integration. Launch workshop program. Start cottage rental. Begin carbon credit registration process.</div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-title">Phase 3: Maturity (Months 19–36) <span class="phase-tag">R 500,000–R 1,000,000</span></div>
+      <div class="phase-desc">Full syntropic system maturity. Rare plant nursery operational. Biodynamic certification. Expand education programs. Develop value-added product line. Optimise all revenue streams. Become a regional demonstration site.</div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-title">Phase 4: Scale & Legacy (Year 3+) <span class="phase-tag">Self-sustaining</span></div>
+      <div class="phase-desc">Revenue exceeds operating costs. Surplus reinvested in expansion or community programs. The farm becomes a self-sustaining ecosystem and a model for regenerative agriculture across the Western Cape.</div>
+    </div>
+  </div>
+</section>
+
+<section id="financials">
+  <div class="container">
+    <div class="section-label">Financial Plan</div>
+    <h2>Capital Requirements & Projections</h2>
+
+    <h3>Initial Capital Requirements</h3>
+    <div class="fin-highlight">
+      <div class="fin-row">
+        <span class="fin-label">Property acquisition (4.3 ha, off-grid)</span>
+        <span class="fin-value amber">R 4,000,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Phase 1 setup (water filter, wattle clearing, aquaponics, greenhouse)</span>
+        <span class="fin-value amber">R 4,000,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Phase 2 expansion (syntropic systems, shade houses, livestock)</span>
+        <span class="fin-value amber">R 1,500,000–R 2,500,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Phase 3 maturity (certification, education buildout)</span>
+        <span class="fin-value amber">R 500,000–R 1,000,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label"><strong>Total Capital Required</strong></span>
+        <span class="fin-value amber"><strong>R 10,000,000–R 11,500,000</strong></span>
+      </div>
+    </div>
+
+    <h3>Revenue Projections (Annual, at Maturity — Year 3)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Revenue Stream</th>
+          <th>Conservative</th>
+          <th>Target</th>
+          <th>Optimistic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ecological restoration (RMB bond)</td>
+          <td>R 300,000</td>
+          <td>R 450,000</td>
+          <td>R 600,000</td>
+        </tr>
+        <tr>
+          <td>Carbon credits</td>
+          <td>R 5,000</td>
+          <td>R 20,000</td>
+          <td>R 50,000</td>
+        </tr>
+        <tr>
+          <td>Produce sales</td>
+          <td>R 150,000</td>
+          <td>R 250,000</td>
+          <td>R 400,000</td>
+        </tr>
+        <tr>
+          <td>Eco-tourism &amp; accommodation</td>
+          <td>R 80,000</td>
+          <td>R 150,000</td>
+          <td>R 250,000</td>
+        </tr>
+        <tr>
+          <td>Education &amp; training</td>
+          <td>R 100,000</td>
+          <td>R 200,000</td>
+          <td>R 350,000</td>
+        </tr>
+        <tr>
+          <td><strong>Total Annual Revenue</strong></td>
+          <td><strong>R 635,000</strong></td>
+          <td><strong>R 1,070,000</strong></td>
+          <td><strong>R 1,650,000</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Operating Costs (Annual, at Maturity)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Cost Category</th>
+          <th>Estimated Annual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Staff (2–3 full-time)</td>
+          <td>R 240,000–R 360,000</td>
+        </tr>
+        <tr>
+          <td>Maintenance &amp; repairs</td>
+          <td>R 50,000–R 80,000</td>
+        </tr>
+        <tr>
+          <td>Feed, seedlings, consumables</td>
+          <td>R 60,000–R 120,000</td>
+        </tr>
+        <tr>
+          <td>Insurance &amp; rates</td>
+          <td>R 30,000–R 50,000</td>
+        </tr>
+        <tr>
+          <td>Education &amp; marketing</td>
+          <td>R 40,000–R 80,000</td>
+        </tr>
+        <tr>
+          <td><strong>Total Operating Costs</strong></td>
+          <td><strong>R 420,000–R 690,000</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Break-even analysis:</strong> At target revenue (R 1,070,000) vs. operating costs (R 690,000), the project breaks even by <strong>Year 3</strong> and generates <strong>R 380,000+ annual surplus</strong> for reinvestment. The ecological restoration bond provides critical early revenue during the capital-intensive establishment phase.
+    </div>
+
+    <h3>Investment Structure</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Amount</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Investor equity</td>
+          <td>R 10,000,000–R 11,500,000</td>
+          <td>Property + setup capital</td>
+        </tr>
+        <tr>
+          <td>RMB ecological bond</td>
+          <td>Revenue (not debt)</td>
+          <td>Wattle clearing operations</td>
+        </tr>
+        <tr>
+          <td>Carbon pre-payments</td>
+          <td>Variable</td>
+          <td>Future credit sales</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>All figures are estimates based on research and comparable projects. Detailed due diligence required before investment decisions.</em></p>
+  </div>
+</section>
+
+<section id="verification">
+  <div class="container">
+    <div class="section-label">Verification &amp; Monitoring</div>
+    <h2>Proving Water Retention &amp; Soil Moisture</h2>
+    <p>Investors, bond partners, and carbon markets require <strong>verifiable proof</strong> that the farm is retaining soil moisture and using less water. The project uses a multi-layered monitoring approach — from ground sensors to satellite remote sensing.</p>
+
+    <h3>Soil Moisture Monitoring</h3>
+    <div class="grid-2">
+      <div class="card card-accent">
+        <h3>In-Ground Sensors</h3>
+        <ul>
+          <li><strong>Capacitance probes</strong> at 10cm, 30cm, 60cm depths — continuous moisture readings</li>
+          <li><strong>Tensiometers</strong> — measure soil water tension (how hard plants must work to extract water)</li>
+          <li><strong>TDR/FDR sensors</strong> — time-domain reflectometry for precise volumetric water content</li>
+          <li><strong>Data loggers</strong> with GSM/LoRa uplink — real-time dashboard accessible to investors and researchers</li>
+        </ul>
+      </div>
+      <div class="card card-green">
+        <h3>Soil Health Indicators</h3>
+        <ul>
+          <li><strong>Infiltration rate tests</strong> — double-ring infiltrometer: how fast water enters the soil</li>
+          <li><strong>Soil organic carbon (SOC)</strong> — annual lab tests; higher SOC = higher water holding capacity</li>
+          <li><strong>Bulk density</strong> — compacted soil holds less water; tracked annually</li>
+          <li><strong>Earthworm counts</strong> — simple, visual indicator of soil biology and structure</li>
+          <li><strong>Penetrometer readings</strong> — measures soil compaction</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Water Balance Tracking</h3>
+    <div class="grid-2">
+      <div class="card card-blue">
+        <h3>Inputs</h3>
+        <ul>
+          <li><strong>Borehole flow meter</strong> — total water pumped (L/day)</li>
+          <li><strong>Rainfall gauge</strong> — on-site weather station</li>
+          <li><strong>Irrigation metering</strong> — per-zone water use</li>
+        </ul>
+      </div>
+      <div class="card card-amber">
+        <h3>Outputs &amp; Losses</h3>
+        <ul>
+          <li><strong>Dam level sensors</strong> — monitor water storage</li>
+          <li><strong>Evapotranspiration (ET) estimates</strong> — calculated from weather data</li>
+          <li><strong>Runoff monitoring</strong> — compare cleared vs. vegetated areas</li>
+          <li><strong>Soil moisture trend</strong> — the key metric: is moisture increasing over time?</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Remote Sensing &amp; Satellite Verification</h3>
+    <div class="card card-accent">
+      <ul>
+        <li><strong>NDVI (Normalized Difference Vegetation Index)</strong> — satellite-based vegetation health; shows greening over time as syntropic systems mature</li>
+        <li><strong>Land Surface Temperature (LST)</strong> — cooler soil temperatures indicate higher moisture content and transpiration</li>
+        <li><strong>SAR (Synthetic Aperture Radar)</strong> — penetrates cloud cover; directly measures soil moisture from space</li>
+        <li><strong>Sentinel-2 / Landsat</strong> — free satellite imagery for annual land cover classification (wattle clearing progress, reforestation)</li>
+        <li><strong>Evapotranspiration mapping</strong> — verify actual water use vs. conventional agriculture</li>
+      </ul>
+    </div>
+
+    <h3>MRV (Monitoring, Reporting, Verification)</h3>
+    <div class="callout">
+      <strong>Carbon credit MRV:</strong> For carbon credit revenue, a formal MRV pipeline is required. This combines field sensor data, soil sampling, and satellite imagery to produce verified carbon sequestration numbers. Programs like Orizon CarbonCrop and Cultivating Carbon handle this for South African farms — they provide the platform, verification, and credit issuance. The farm's sensor data feeds directly into this pipeline.
+    </div>
+
+    <h3>Baseline &amp; Comparison Methodology</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Baseline (Before)</th>
+          <th>Year 1</th>
+          <th>Year 3</th>
+          <th>Year 5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Soil moisture (volumetric %, 30cm depth)</td>
+          <td>12–15%</td>
+          <td>16–18%</td>
+          <td>20–25%</td>
+          <td>25–30%</td>
+        </tr>
+        <tr>
+          <td>Soil organic carbon (%, 0–30cm)</td>
+          <td>1.5–2.0%</td>
+          <td>2.0–2.5%</td>
+          <td>3.0–4.0%</td>
+          <td>4.0–5.5%</td>
+        </tr>
+        <tr>
+          <td>Infiltration rate (mm/hr)</td>
+          <td>15–25</td>
+          <td>30–45</td>
+          <td>60–100</td>
+          <td>100–150</td>
+        </tr>
+        <tr>
+          <td>Irrigation water use (L/m²/yr)</td>
+          <td>25–30</td>
+          <td>20–25</td>
+          <td>12–18</td>
+          <td>8–12</td>
+        </tr>
+        <tr>
+          <td>Borehole water extracted (kL/yr)</td>
+          <td>Baseline</td>
+          <td>-10%</td>
+          <td>-25%</td>
+          <td>-40%</td>
+        </tr>
+        <tr>
+          <td>Vegetation greenness (NDVI)</td>
+          <td>0.3–0.4</td>
+          <td>0.4–0.5</td>
+          <td>0.55–0.65</td>
+          <td>0.65–0.75</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>Baseline values are estimates for degraded wattle-invaded land in the Overberg. Actual baseline will be measured during Phase 1 before any interventions.</em></p>
+  </div>
+</section>
+
+<section id="trust">
+  <div class="container">
+    <div class="section-label">Land Stewardship Trust</div>
+    <h2>A Trust of Land Stewards Pitching Projects for Approval</h2>
+    <p>The project is structured as a <strong>Land Stewardship Trust</strong> — a legal entity that oversees multiple properties and projects across the Western Cape. Land stewards (farmers, land managers, community groups) pitch projects to the trust for approval, funding, and support. The trust ensures alignment with the mission: <strong>revitalisation and nurturing of the land</strong>.</p>
+
+    <h3>Why a Trust Structure?</h3>
+    <div class="grid-2">
+      <div class="card card-green">
+        <h3>Alignment with South African Law</h3>
+        <p>South Africa's <strong>Biodiversity Stewardship</strong> framework (SANBI / CapeNature) offers 5 agreement types — from informal partnership areas to fully declared Nature Reserves. The trust can serve as the coordinating body for multiple stewardship agreements, giving land stewards legal recognition and access to incentives.</p>
+      </div>
+      <div class="card card-blue">
+        <h3>Scalable Model</h3>
+        <p>Rather than one farm, the trust becomes a <strong>portfolio of regenerative projects</strong>. Each land steward manages their property; the trust provides verification, funding access, carbon credit aggregation, and the RMB bond relationship. Impact multiplies with each approved project.</p>
+      </div>
+    </div>
+
+    <h3>Trust Structure</h3>
+    <div class="card card-accent">
+      <h3>Legal Entity</h3>
+      <p>A <strong>Non-Profit Company (NPC)</strong> or <strong>Trust</strong> under South African law, registered with CIPC. The trust holds the master agreements with the RMB bond / TNC SA, carbon programs, and Biodiversity Stewardship authorities. Individual land stewards operate under sub-agreements with the trust.</p>
+    </div>
+
+    <h3>How It Works</h3>
+    <div class="phase">
+      <div class="phase-title">1. Application</div>
+      <div class="phase-desc">Land stewards submit a project proposal: property details, current state, proposed interventions (wattle clearing, syntropic, aquaponics, etc.), and expected outcomes. Applications are accepted on a rolling basis.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-title">2. Assessment</div>
+      <div class="phase-desc">The trust evaluates each proposal against criteria: biodiversity value, water catchment priority, soil degradation level, social impact, and feasibility. A site visit and baseline assessment are conducted.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-title">3. Approval &amp; Agreement</div>
+      <div class="phase-desc">Approved projects receive a stewardship agreement. The trust assigns a Biodiversity Stewardship level (Conservation Area, Biodiversity Agreement, or higher). The land steward commits to a management plan with measurable targets.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-title">4. Support &amp; Funding</div>
+      <div class="phase-desc">The trust channels resources: RMB bond clearing funds, carbon credit pre-payments, grant funding, technical assistance, and training. The trust aggregates carbon credits across all properties for better pricing.</div>
+    </div>
+    <div class="phase">
+      <div class="phase-title">5. Verification &amp; Reporting</div>
+      <div class="phase-desc">The trust conducts annual audits and monitoring (the MRV system described above). Results are reported to funders, bond partners, and stewards. High-performing stewards receive additional support.</div>
+    </div>
+
+    <h3>Stewardship Agreement Levels</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Duration</th>
+          <th>Protection</th>
+          <th>Incentives</th>
+          <th>Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Conservation Area</td>
+          <td>Voluntary</td>
+          <td>Informal</td>
+          <td>Technical support</td>
+          <td>Entry point; testing commitment</td>
+        </tr>
+        <tr>
+          <td>Biodiversity Agreement</td>
+          <td>10+ years</td>
+          <td>Contract</td>
+          <td>Funding priority</td>
+          <td>Active restoration projects</td>
+        </tr>
+        <tr>
+          <td>Protected Environment</td>
+          <td>30+ years</td>
+          <td>Declared</td>
+          <td>Rates reduction +</td>
+          <td>High biodiversity value</td>
+        </tr>
+        <tr>
+          <td>Nature Reserve</td>
+          <td>30+ years</td>
+          <td>Title deed</td>
+          <td>Full incentives</td>
+          <td>Critical ecosystems</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Trust Revenue Model</h3>
+    <div class="fin-highlight">
+      <div class="fin-row">
+        <span class="fin-label">RMB bond revenue (aggregated across all properties)</span>
+        <span class="fin-value green">Primary income</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Carbon credit sales (aggregated portfolio = better price)</span>
+        <span class="fin-value green">Growing income</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Grant funding (government, international climate funds)</span>
+        <span class="fin-value green">Project-specific</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Steward fees (small annual contribution per approved project)</span>
+        <span class="fin-value">R 5,000–R 15,000/yr</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Trust administration fee (10–15% of carbon/bond revenue)</span>
+        <span class="fin-value">Covers operations</span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Tesselaarsdal Syntropic Farm is the pilot project</strong> — the first property approved under the trust. It serves as the demonstration site, proving the model before scaling to other land stewards across the Overberg and Western Cape.
+    </div>
+  </div>
+</section>
+
+<section id="impact">
+  <div class="container">
+    <div class="section-label">Impact</div>
+    <h2>Measurable Outcomes</h2>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-value">15–30%</div>
+        <div class="stat-label">Increase in Water Yield</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">5–15 t</div>
+        <div class="stat-label">CO₂e Sequestered / ha / yr</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">100%</div>
+        <div class="stat-label">Biodynamic &amp; Organic</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">50+</div>
+        <div class="stat-label">People Trained / Year</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">100+</div>
+        <div class="stat-label">Plant Species</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">0</div>
+        <div class="stat-label">External Inputs (Year 3)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="container">
+    <div class="section-label">Team</div>
+    <h2>Core Roles</h2>
+    <div class="grid-2">
+      <div class="card card-accent">
+        <h3>Project Lead</h3>
+        <p>Overall vision, investor relations, strategic partnerships. Coordinates the RMB bond relationship and community engagement.</p>
+      </div>
+      <div class="card card-green">
+        <h3>Syntropic Farm Manager</h3>
+        <p>Day-to-day farm operations. Syntropic system design and implementation. Manages volunteers and seasonal workers.</p>
+      </div>
+      <div class="card card-blue">
+        <h3>Aquaponics &amp; Water Systems</h3>
+        <p>Designs and maintains aquaponics, water filtration, and irrigation. Manages fish, poultry, and livestock integration.</p>
+      </div>
+      <div class="card card-amber">
+        <h3>Education &amp; Outreach</h3>
+        <p>Develops training curriculum, manages workshops and internships. Handles eco-tourism, marketing, and visitor experience.</p>
+      </div>
+    </div>
+    <p>Advisory roles: soil scientist, biodynamic certifier, carbon project developer, and a Theewaterskloof catchment hydrologist.</p>
+  </div>
+</section>
+
+<section id="risks">
+  <div class="container">
+    <div class="section-label">Risk Analysis</div>
+    <h2>Known Risks &amp; Mitigations</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Risk</th>
+          <th>Level</th>
+          <th>Mitigation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Water quality (ferrous iron in borehole)</td>
+          <td class="risk-med">Medium</td>
+          <td>Reed bed + filtration system installed in Phase 1</td>
+        </tr>
+        <tr>
+          <td>Climate variability (drought, frost)</td>
+          <td class="risk-med">Medium</td>
+          <td>Climate-controlled areas, diversified species, dam storage</td>
+        </tr>
+        <tr>
+          <td>Carbon credit verification delays</td>
+          <td class="risk-med">Medium</td>
+          <td>Register early; use established Verra VCS methodologies</td>
+        </tr>
+        <tr>
+          <td>Wattle regrowth</td>
+          <td class="risk-med">Medium</td>
+          <td>Follow-up clearing schedule; bond-funded maintenance</td>
+        </tr>
+        <tr>
+          <td>Market access for produce</td>
+          <td class="risk-low">Low</td>
+          <td>Existing Overberg market network; online channels</td>
+        </tr>
+        <tr>
+          <td>Regulatory changes (water rights, carbon)</td>
+          <td class="risk-low">Low</td>
+          <td>Engage TNC SA and local authorities early; stay compliant</td>
+        </tr>
+        <tr>
+          <td>Capital cost overruns</td>
+          <td class="risk-med">Medium</td>
+          <td>10% contingency buffer; phased approach limits exposure</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="ask">
+  <div class="container">
+    <div class="section-label">The Ask</div>
+    <h2>Investment Opportunity</h2>
+    <p>Tesselaarsdal Syntropic Farm is seeking <strong>R 10,000,000–R 11,500,000</strong> in equity investment to acquire the property and fund the phased establishment of a self-sustaining regenerative farm.</p>
+    <div class="fin-highlight">
+      <div class="fin-row">
+        <span class="fin-label">Property (4.3 ha, off-grid, productive)</span>
+        <span class="fin-value">R 4,000,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Phase 1 setup</span>
+        <span class="fin-value">R 4,000,000</span>
+      </div>
+      <div class="fin-row">
+        <span class="fin-label">Phases 2–3 expansion</span>
+        <span class="fin-value">R 2,000,000–R 3,500,000</span>
+      </div>
+    </div>
+    <p><strong>What investors get:</strong> Equity in a tangible, income-producing asset (land), exposure to ecological restoration finance (RMB bond), carbon credits, and a diversified regenerative agriculture business with multiple revenue streams.</p>
+    <p><strong>What the planet gets:</strong> A model for how agriculture can restore water cycles, sequester carbon, and feed communities — while being financially self-sustaining.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Tesselaarsdal Syntropic Farm — Business Plan 2026</p>
+    <p>Property: Portion 163 of Farm 811, Tesselaarsdal, Caledon, Western Cape</p>
+    <p>Reference: <a href="https://www.property24.com/for-sale/tesselaarsdal/caledon/western-cape/7872/117531286">Property24 Listing P24-117531286</a></p>
+  </div>
+</footer>
+
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('./sw.js').catch(err=>console.warn('SW registration failed:',err))})}
+</script>
+</body>
+</html>
