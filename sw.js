@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tesselaarsdal-v1';
+const CACHE_NAME = 'tesselaarsdal-v2';
 const APP_SHELL = [
   './',
   './index.html',
@@ -8,15 +8,14 @@ const APP_SHELL = [
   './icon-192.png',
   './icon-512.png',
   './icon-maskable-192.png',
-  './icon-maskable-512.png'
+  './icon-maskable-512.png',
+  './images/harvest.jpg'
 ];
 
 // External origins to runtime-cache (fonts, images)
 const EXTERNAL_ORIGINS = [
   'https://fonts.googleapis.com',
-  'https://fonts.gstatic.com',
-  'https://cdn.pixabay.com',
-  'https://images.prop24.com'
+  'https://fonts.gstatic.com'
 ];
 
 self.addEventListener('install', (event) => {
